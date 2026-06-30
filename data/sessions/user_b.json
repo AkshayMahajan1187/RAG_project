@@ -1,0 +1,11 @@
+[
+  {
+    "timestamp": "2026-06-26T00:23:20.244552",
+    "query": "What is parsing?",
+    "intent": "qa",
+    "answer": "Some answer B",
+    "trust": null,
+    "grounded": null,
+    "citations": null
+  }
+]

@@ -1,0 +1,22 @@
+# Environment variables (NEVER commit real secrets)
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+build/
+dist/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Note: data/ is intentionally NOT excluded here.
+# We want chroma_db/ and uploaded_docs/ committed so the
+# deployed app starts with documents already ingested.

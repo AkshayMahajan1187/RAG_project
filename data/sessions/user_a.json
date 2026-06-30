@@ -1,0 +1,11 @@
+[
+  {
+    "timestamp": "2026-06-26T00:23:20.239366",
+    "query": "What is register allocation?",
+    "intent": "qa",
+    "answer": "Some answer A",
+    "trust": null,
+    "grounded": null,
+    "citations": null
+  }
+]

@@ -1,0 +1,1587 @@
+[
+  {
+    "timestamp": "2026-06-25T18:30:28.715660",
+    "query": "What is register allocation?",
+    "intent": "qa",
+    "answer": "Register Allocation = Efficiently using limited fast storage (registers)",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test.pdf",
+        "page": 14,
+        "chunk_id": "test.pdf_page14_chunk38",
+        "snippet": "advantage, the compiler tries to keep frequently used variables in registers to improve execution performance. \n  \nRegister Allocation = Efficiently u..."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T18:30:33.213373",
+    "query": "What problem does it try to solve?",
+    "intent": "qa",
+    "answer": "Not all variables can be stored in registers simultaneously.",
+    "trust": {
+      "trust": "medium",
+      "reason": "The answer is faithful to the retrieved evidence, which was medium confidence.",
+      "evidence_level": "medium",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 3,
+        "filename": "test.pdf",
+        "page": 13,
+        "chunk_id": "test.pdf_page13_chunk33",
+        "snippet": "\u2714 Problem: \n\u2022 \nNot all variables can be stored in registers simultaneously  \n\u2022 \nSome values must be stored in memory (which is slower)  \n\u2714 Example: \nt..."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T18:56:16.791112",
+    "query": "What is code optimization, and why is it needed?",
+    "intent": "qa",
+    "answer": "Even if a program is syntactically and semantically correct, it may still contain redundant or inefficient instructions.",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 3,
+        "filename": "test.pdf",
+        "page": 1,
+        "chunk_id": "test.pdf_page1_chunk3",
+        "snippet": "Why Optimization is Needed \nEven if a program is syntactically and semantically correct, it may still contain redundant or inefficient \ninstructions...."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T18:56:24.296337",
+    "query": "What are the two types of code optimization?",
+    "intent": "qa",
+    "answer": "Code optimization is broadly classified into two categories: \n1. Machine-Independent Optimization",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test.pdf",
+        "page": 1,
+        "chunk_id": "test.pdf_page1_chunk3",
+        "snippet": "Why Optimization is Needed \nEven if a program is syntactically and semantically correct, it may still contain redundant or inefficient \ninstructions...."
+      },
+      {
+        "ref": 2,
+        "filename": "test.pdf",
+        "page": 1,
+        "chunk_id": "test.pdf_page1_chunk4",
+        "snippet": "\u2714 1. Machine-Independent Optimization \nThese optimizations are applied on intermediate code, without considering the target machine architecture. \n Fo..."
+      },
+      {
+        "ref": 3,
+        "filename": "test.pdf",
+        "page": 1,
+        "chunk_id": "test.pdf_page1_chunk1",
+        "snippet": "Code Optimization  \nCode Optimization is a crucial phase in compiler design that focuses on improving the efficiency of the \nintermediate code generat..."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T18:56:31.746209",
+    "query": "What is constant folding?",
+    "intent": "qa",
+    "answer": "Constant folding is the process of evaluating constant expressions at compile time instead of runtime.",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test.pdf",
+        "page": 8,
+        "chunk_id": "test.pdf_page8_chunk20",
+        "snippet": "\u2714 Improve execution speed  \n\u2714 Reduce unnecessary computations  \n\u2714 Optimize memory usage  \n\u2714 Make code simpler and cleaner  \n \n1. Constant Folding \nDef..."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T18:56:42.906466",
+    "query": "What is dead code elimination?",
+    "intent": "qa",
+    "answer": "Dead Code Elimination removes code that is never executed or code whose result is never used.",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 2,
+        "filename": "test.pdf",
+        "page": 8,
+        "chunk_id": "test.pdf_page8_chunk21",
+        "snippet": "2. Dead Code Elimination \nDefinition \nDead code elimination removes: \n\u2022 \nCode that is never executed  \n\u2022 \nCode whose result is never used  \n \nExample..."
+      },
+      {
+        "ref": 3,
+        "filename": "test.pdf",
+        "page": 1,
+        "chunk_id": "test.pdf_page1_chunk4",
+        "snippet": "\u2714 1. Machine-Independent Optimization \nThese optimizations are applied on intermediate code, without considering the target machine architecture. \n Fo..."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T18:56:50.021342",
+    "query": "What is a basic block?",
+    "intent": "qa",
+    "answer": "A Basic Block is a sequence of consecutive instructions that has: \n\u2022 One entry point (control enters only at the beginning)  \n\u2022 One exit point (control leaves only at the end)  \n\u2022 No jumps or branches inside the block  \n A straight-line code segment with no interruptions",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test.pdf",
+        "page": 5,
+        "chunk_id": "test.pdf_page5_chunk13",
+        "snippet": "1. Basic Block \n Definition \nA Basic Block is a sequence of consecutive instructions that has: \n\u2022 \n\u2714 One entry point (control enters only at the begin..."
+      },
+      {
+        "ref": 3,
+        "filename": "test.pdf",
+        "page": 5,
+        "chunk_id": "test.pdf_page5_chunk14",
+        "snippet": "\u2714 Intermediate Code: \nt1 = a + b \nt2 = t1 * c \nt3 = t2 - d \n This is a single basic block because: \n\u2022 \nNo jumps  \n\u2022 \nNo labels  \n\u2022 \nExecution is conti..."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T18:57:00.925216",
+    "query": "What is register allocation, and what does 'spilling' mean?",
+    "intent": "qa",
+    "answer": "Spilling is the process of storing variables in main memory (RAM) instead of registers when there are more variables than available registers.",
+    "trust": {
+      "trust": "medium",
+      "reason": "The answer is faithful to the retrieved evidence, which was medium confidence.",
+      "evidence_level": "medium",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test.pdf",
+        "page": 15,
+        "chunk_id": "test.pdf_page15_chunk39",
+        "snippet": "The Main Problem \nThe number of registers in a CPU is very limited, but programs may have many variables and temporary values. \n So, the compiler must..."
+      },
+      {
+        "ref": 2,
+        "filename": "test.pdf",
+        "page": 15,
+        "chunk_id": "test.pdf_page15_chunk40",
+        "snippet": "Example \n\u2714 Intermediate Code: \nt1 = a + b \nt2 = c + d \nt3 = t1 + t2 \n \n\u2714 Assume only 2 Registers (R1, R2) \nStep-by-step allocation: \nLOAD R1, a \nADD..."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T18:57:10.573485",
+    "query": "What are the main challenges in code generation?",
+    "intent": "qa",
+    "answer": "The challenges in Code Generation include dealing with a Limited Number of Registers, as mentioned in [1].",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test.pdf",
+        "page": 13,
+        "chunk_id": "test.pdf_page13_chunk32",
+        "snippet": "Challenges in Code Generation \nThe Code Generation phase is responsible for producing efficient machine code from intermediate code. However, \nthis pr..."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T18:57:24.266851",
+    "query": "What is syntax analysis (parsing)?",
+    "intent": "qa",
+    "answer": "Syntax analysis takes the token stream produced by the lexical analyzer and checks whether it follows the \ngrammatical rules of the programming language. If the structure is valid, the parser builds a parse tree (or syntax \ntree) that represents the hierarchical structure of the program. If the structure is invalid, it reports syntax errors such \nas missing semicolons, unmatched parentheses, or incorrect ordering of operators.",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test2.pdf",
+        "page": 1,
+        "chunk_id": "test2.pdf_page1_chunk1",
+        "snippet": "the Syntax Analysis phase, also known as Parsing. \nSyntax analysis takes the token stream produced by the lexical analyzer and checks whether it follo..."
+      },
+      {
+        "ref": 2,
+        "filename": "test2.pdf",
+        "page": 1,
+        "chunk_id": "test2.pdf_page1_chunk0",
+        "snippet": "Unit 2: Syntax Analysis (Parsing) \n \nIn Unit 1, the focus was on breaking the source code into individual units called tokens using lexical analysis...."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T18:57:43.626962",
+    "query": "What is a context-free grammar, and what are its four components?",
+    "intent": "qa",
+    "answer": "A Context-Free Grammar consists of four main components: \n1. Terminals \n2. Non-terminals \n3. Productions \n4. Start Symbol",
+    "trust": {
+      "trust": "low",
+      "reason": "The answer includes details not clearly supported by the retrieved evidence, regardless of how strong that evidence was.",
+      "evidence_level": "high",
+      "grounded": false
+    },
+    "grounded": false,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test2.pdf",
+        "page": 1,
+        "chunk_id": "test2.pdf_page1_chunk3",
+        "snippet": "\u2022 \nNested control statements \u2192 if (x) { if (y) { ... } }  \nA CFG provides a set of rules that specify how valid sentences (programs) in a language can..."
+      },
+      {
+        "ref": 3,
+        "filename": "test2.pdf",
+        "page": 1,
+        "chunk_id": "test2.pdf_page1_chunk2",
+        "snippet": "1. Context-Free Grammar (CFG) \nTo define the syntax of programming languages, compilers use a formal system called a Context-Free Grammar \n(CFG). Unli..."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T18:57:54.187216",
+    "query": "What is a parse tree?",
+    "intent": "qa",
+    "answer": "A parse tree is not mentioned in the provided context.",
+    "trust": {
+      "trust": "low",
+      "reason": "The answer is faithful to the retrieved evidence, which was low confidence.",
+      "evidence_level": "low",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test.pdf",
+        "page": 5,
+        "chunk_id": "test.pdf_page5_chunk13",
+        "snippet": "1. Basic Block \n Definition \nA Basic Block is a sequence of consecutive instructions that has: \n\u2022 \n\u2714 One entry point (control enters only at the begin..."
+      },
+      {
+        "ref": 2,
+        "filename": "test.pdf",
+        "page": 15,
+        "chunk_id": "test.pdf_page15_chunk39",
+        "snippet": "The Main Problem \nThe number of registers in a CPU is very limited, but programs may have many variables and temporary values. \n So, the compiler must..."
+      },
+      {
+        "ref": 3,
+        "filename": "test2.pdf",
+        "page": 1,
+        "chunk_id": "test2.pdf_page1_chunk3",
+        "snippet": "\u2022 \nNested control statements \u2192 if (x) { if (y) { ... } }  \nA CFG provides a set of rules that specify how valid sentences (programs) in a language can..."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T18:57:59.640765",
+    "query": "What does it mean for a grammar to be ambiguous?",
+    "intent": "qa",
+    "answer": "An ambiguous grammar is a grammar that is said to be ambiguous if a single input string can be represented by more than one distinct parse tree.",
+    "trust": {
+      "trust": "medium",
+      "reason": "The answer is faithful to the retrieved evidence, which was medium confidence.",
+      "evidence_level": "medium",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 2,
+        "filename": "test2.pdf",
+        "page": 5,
+        "chunk_id": "test2.pdf_page5_chunk16",
+        "snippet": "tree. \nThis means: \n\u2022 \nThe compiler has multiple ways to interpret the same expression  \n\u2022 \nLeads to confusion in evaluation  \n Example of Ambiguity..."
+      },
+      {
+        "ref": 3,
+        "filename": "test2.pdf",
+        "page": 5,
+        "chunk_id": "test2.pdf_page5_chunk15",
+        "snippet": "Example of Parse Tree \nConsider the expression: \n2 + 3 * 4 \nUsing a simple grammar: \nExpr \u2192 Expr + Expr \nExpr \u2192 Expr * Expr \nExpr \u2192 number \n \n\u2714 Parse..."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T18:58:10.674452",
+    "query": "What is LL(1) parsing, and what does the '1' mean?",
+    "intent": "qa",
+    "answer": "Unfortunately, the provided context does not mention LL(1) parsing.",
+    "trust": {
+      "trust": "low",
+      "reason": "The answer is faithful to the retrieved evidence, which was low confidence.",
+      "evidence_level": "low",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test.pdf",
+        "page": 16,
+        "chunk_id": "test.pdf_page16_chunk41",
+        "snippet": "Target Machine Code  \nTarget Machine Code is the final output of the compiler, representing the program in a form that can be directly \nexecuted by th..."
+      },
+      {
+        "ref": 2,
+        "filename": "test2.pdf",
+        "page": 1,
+        "chunk_id": "test2.pdf_page1_chunk3",
+        "snippet": "\u2022 \nNested control statements \u2192 if (x) { if (y) { ... } }  \nA CFG provides a set of rules that specify how valid sentences (programs) in a language can..."
+      },
+      {
+        "ref": 3,
+        "filename": "test.pdf",
+        "page": 15,
+        "chunk_id": "test.pdf_page15_chunk39",
+        "snippet": "The Main Problem \nThe number of registers in a CPU is very limited, but programs may have many variables and temporary values. \n So, the compiler must..."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T18:58:25.733148",
+    "query": "What is recursive descent parsing?",
+    "intent": "qa",
+    "answer": "Unfortunately, the provided context does not mention recursive descent parsing.",
+    "trust": {
+      "trust": "low",
+      "reason": "The answer is faithful to the retrieved evidence, which was low confidence.",
+      "evidence_level": "low",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test2.pdf",
+        "page": 1,
+        "chunk_id": "test2.pdf_page1_chunk1",
+        "snippet": "the Syntax Analysis phase, also known as Parsing. \nSyntax analysis takes the token stream produced by the lexical analyzer and checks whether it follo..."
+      },
+      {
+        "ref": 2,
+        "filename": "test2.pdf",
+        "page": 4,
+        "chunk_id": "test2.pdf_page4_chunk12",
+        "snippet": "Key Understanding  \n \nComponent \nMeaning \nExample \nTerminals \nActual symbols \nid, +, if \nNon-terminals \nVariables representing structure \nExpr, Stmt..."
+      },
+      {
+        "ref": 3,
+        "filename": "test2.pdf",
+        "page": 4,
+        "chunk_id": "test2.pdf_page4_chunk14",
+        "snippet": "1. Parse Tree (Syntax Tree) \nA Parse Tree is a tree-like structure that shows how a string is generated using the production rules of a Context-\nFree..."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T18:58:57.168035",
+    "query": "What's the difference between top-down and bottom-up parsing?",
+    "intent": "qa",
+    "answer": "Unfortunately, the provided context does not mention top-down and bottom-up parsing.",
+    "trust": {
+      "trust": "low",
+      "reason": "The answer is faithful to the retrieved evidence, which was low confidence.",
+      "evidence_level": "low",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test2.pdf",
+        "page": 1,
+        "chunk_id": "test2.pdf_page1_chunk3",
+        "snippet": "\u2022 \nNested control statements \u2192 if (x) { if (y) { ... } }  \nA CFG provides a set of rules that specify how valid sentences (programs) in a language can..."
+      },
+      {
+        "ref": 2,
+        "filename": "test2.pdf",
+        "page": 5,
+        "chunk_id": "test2.pdf_page5_chunk15",
+        "snippet": "Example of Parse Tree \nConsider the expression: \n2 + 3 * 4 \nUsing a simple grammar: \nExpr \u2192 Expr + Expr \nExpr \u2192 Expr * Expr \nExpr \u2192 number \n \n\u2714 Parse..."
+      },
+      {
+        "ref": 3,
+        "filename": "test2.pdf",
+        "page": 4,
+        "chunk_id": "test2.pdf_page4_chunk14",
+        "snippet": "1. Parse Tree (Syntax Tree) \nA Parse Tree is a tree-like structure that shows how a string is generated using the production rules of a Context-\nFree..."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T18:59:02.291112",
+    "query": "What is panic mode error recovery?",
+    "intent": "qa",
+    "answer": "Panic mode is the simplest and most widely used error recovery technique. It works by discarding input tokens one by one until it finds a synchronizing token, such as a semicolon or a closing bracket.",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test2.pdf",
+        "page": 20,
+        "chunk_id": "test2.pdf_page20_chunk58",
+        "snippet": "Types of Syntax Errors \nSome common syntax errors include: \n\u2022 \nMissing semicolon \u2192 int x = 10  \n\u2022 \nUnmatched brackets \u2192 (a + b  \n\u2022 \nIncorrect operator..."
+      },
+      {
+        "ref": 3,
+        "filename": "test2.pdf",
+        "page": 20,
+        "chunk_id": "test2.pdf_page20_chunk59",
+        "snippet": "\u2714 Working: \n\u2022 \nWhen an error is detected, the parser discards input tokens one by one  \n\u2022 \nIt continues discarding until it finds a synchronizing toke..."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T18:59:11.675064",
+    "query": "What is database normalization?",
+    "intent": "qa",
+    "answer": "I'm sorry, but the context does not mention database normalization.",
+    "trust": {
+      "trust": "low",
+      "reason": "The answer includes details not clearly supported by the retrieved evidence, regardless of how strong that evidence was.",
+      "evidence_level": "low",
+      "grounded": false
+    },
+    "grounded": false,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test.pdf",
+        "page": 1,
+        "chunk_id": "test.pdf_page1_chunk1",
+        "snippet": "Code Optimization  \nCode Optimization is a crucial phase in compiler design that focuses on improving the efficiency of the \nintermediate code generat..."
+      },
+      {
+        "ref": 2,
+        "filename": "test.pdf",
+        "page": 2,
+        "chunk_id": "test.pdf_page2_chunk6",
+        "snippet": "\u2714 Before Optimization: \nt1 = 2 + 3 \nt2 = t1 * 4 \n \n\u2714 Step 1: Apply Constant Folding \nt1 = 5 \nt2 = t1 * 4 \n \n\u2714 Step 2: Further Optimization \nt2 = 5 * 4..."
+      },
+      {
+        "ref": 3,
+        "filename": "test.pdf",
+        "page": 11,
+        "chunk_id": "test.pdf_page11_chunk27",
+        "snippet": "Input to Code Generation \nThe code generation phase takes two main inputs: \n \n\u2714 1. Intermediate Representation (IR) \nThis is the optimized intermediat..."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T18:59:29.705848",
+    "query": "What is the time complexity of quicksort?",
+    "intent": "qa",
+    "answer": "I don't see any information about quicksort in the provided context.",
+    "trust": {
+      "trust": "low",
+      "reason": "The answer includes details not clearly supported by the retrieved evidence, regardless of how strong that evidence was.",
+      "evidence_level": "low",
+      "grounded": false
+    },
+    "grounded": false,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test2.pdf",
+        "page": 14,
+        "chunk_id": "test2.pdf_page14_chunk40",
+        "snippet": "Explanation of the Parse Tree \n\u2022 \nStart symbol E expands into T E'  \n\u2022 \nT produces id  \n\u2022 \nE' expands into + T E'  \n\u2022 \nSecond T produces id  \n\u2022 \nFinal..."
+      },
+      {
+        "ref": 2,
+        "filename": "test2.pdf",
+        "page": 19,
+        "chunk_id": "test2.pdf_page19_chunk53",
+        "snippet": "Shift-Reduce vs LL (1) \nFeature \nLL(1) (Top-Down) \nLR (Bottom-Up) \nDirection \nTop \u2192 Down \nBottom \u2192 Up \nDerivation \nLeftmost \nRightmost (reverse) \nPowe..."
+      },
+      {
+        "ref": 3,
+        "filename": "test.pdf",
+        "page": 14,
+        "chunk_id": "test.pdf_page14_chunk36",
+        "snippet": "\u2714 Example: \nLOAD R1, a \nSTORE a, R1 \nLOAD R1, a \nRedundant memory operations waste time \n \n\u2714 Solution: \n\u2022 \nMinimize memory access  \n\u2022 \nKeep frequently..."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T18:59:38.292183",
+    "query": "Compare how document A and document B discuss code optimization.",
+    "intent": "compare",
+    "answer": "Document B does not contain sufficient information on this topic to compare (confidence: low).",
+    "trust": null,
+    "grounded": null,
+    "citations": null
+  },
+  {
+    "timestamp": "2026-06-25T18:59:49.542001",
+    "query": "Compare these two documents.",
+    "intent": "compare",
+    "answer": "Document A does not contain sufficient information on this topic to compare (confidence: low).",
+    "trust": null,
+    "grounded": null,
+    "citations": null
+  },
+  {
+    "timestamp": "2026-06-25T19:39:24.763354",
+    "query": "What is code optimization, and why is it needed?",
+    "intent": "qa",
+    "answer": "Even if a program is syntactically and semantically correct, it may still contain redundant or inefficient instructions.",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 3,
+        "filename": "test.pdf",
+        "page": 1,
+        "chunk_id": "test.pdf_page1_chunk3",
+        "snippet": "Why Optimization is Needed \nEven if a program is syntactically and semantically correct, it may still contain redundant or inefficient \ninstructions...."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T19:39:30.115037",
+    "query": "What are the two types of code optimization?",
+    "intent": "qa",
+    "answer": "Code optimization is broadly classified into two categories: \n1. Machine-Independent Optimization",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test.pdf",
+        "page": 1,
+        "chunk_id": "test.pdf_page1_chunk3",
+        "snippet": "Why Optimization is Needed \nEven if a program is syntactically and semantically correct, it may still contain redundant or inefficient \ninstructions...."
+      },
+      {
+        "ref": 2,
+        "filename": "test.pdf",
+        "page": 1,
+        "chunk_id": "test.pdf_page1_chunk4",
+        "snippet": "\u2714 1. Machine-Independent Optimization \nThese optimizations are applied on intermediate code, without considering the target machine architecture. \n Fo..."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T19:39:34.274294",
+    "query": "What is constant folding?",
+    "intent": "qa",
+    "answer": "Constant folding is the process of evaluating constant expressions at compile time instead of runtime.",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test.pdf",
+        "page": 8,
+        "chunk_id": "test.pdf_page8_chunk20",
+        "snippet": "\u2714 Improve execution speed  \n\u2714 Reduce unnecessary computations  \n\u2714 Optimize memory usage  \n\u2714 Make code simpler and cleaner  \n \n1. Constant Folding \nDef..."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T19:39:39.745620",
+    "query": "What is dead code elimination?",
+    "intent": "qa",
+    "answer": "Dead code elimination removes code that is never executed or whose result is never used.",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test.pdf",
+        "page": 8,
+        "chunk_id": "test.pdf_page8_chunk21",
+        "snippet": "2. Dead Code Elimination \nDefinition \nDead code elimination removes: \n\u2022 \nCode that is never executed  \n\u2022 \nCode whose result is never used  \n \nExample..."
+      },
+      {
+        "ref": 3,
+        "filename": "test.pdf",
+        "page": 1,
+        "chunk_id": "test.pdf_page1_chunk4",
+        "snippet": "\u2714 1. Machine-Independent Optimization \nThese optimizations are applied on intermediate code, without considering the target machine architecture. \n Fo..."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T19:39:44.979035",
+    "query": "What is a basic block?",
+    "intent": "qa",
+    "answer": "A Basic Block is a sequence of consecutive instructions that has: \n\u2022 One entry point (control enters only at the beginning)  \n\u2022 One exit point (control leaves only at the end)  \n\u2022 No jumps or branches inside the block  \n A straight-line code segment with no interruptions",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test.pdf",
+        "page": 5,
+        "chunk_id": "test.pdf_page5_chunk13",
+        "snippet": "1. Basic Block \n Definition \nA Basic Block is a sequence of consecutive instructions that has: \n\u2022 \n\u2714 One entry point (control enters only at the begin..."
+      },
+      {
+        "ref": 3,
+        "filename": "test.pdf",
+        "page": 5,
+        "chunk_id": "test.pdf_page5_chunk14",
+        "snippet": "\u2714 Intermediate Code: \nt1 = a + b \nt2 = t1 * c \nt3 = t2 - d \n This is a single basic block because: \n\u2022 \nNo jumps  \n\u2022 \nNo labels  \n\u2022 \nExecution is conti..."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T19:39:49.735769",
+    "query": "What is register allocation, and what does 'spilling' mean?",
+    "intent": "qa",
+    "answer": "Spilling is the process of storing variables in main memory (RAM) instead of registers when there are more variables than available registers.",
+    "trust": {
+      "trust": "medium",
+      "reason": "The answer is faithful to the retrieved evidence, which was medium confidence.",
+      "evidence_level": "medium",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test.pdf",
+        "page": 15,
+        "chunk_id": "test.pdf_page15_chunk39",
+        "snippet": "The Main Problem \nThe number of registers in a CPU is very limited, but programs may have many variables and temporary values. \n So, the compiler must..."
+      },
+      {
+        "ref": 2,
+        "filename": "test.pdf",
+        "page": 15,
+        "chunk_id": "test.pdf_page15_chunk40",
+        "snippet": "Example \n\u2714 Intermediate Code: \nt1 = a + b \nt2 = c + d \nt3 = t1 + t2 \n \n\u2714 Assume only 2 Registers (R1, R2) \nStep-by-step allocation: \nLOAD R1, a \nADD..."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T19:40:07.616934",
+    "query": "What are the main challenges in code generation?",
+    "intent": "qa",
+    "answer": "The challenges in Code Generation include dealing with a Limited Number of Registers, as mentioned in [1].",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test.pdf",
+        "page": 13,
+        "chunk_id": "test.pdf_page13_chunk32",
+        "snippet": "Challenges in Code Generation \nThe Code Generation phase is responsible for producing efficient machine code from intermediate code. However, \nthis pr..."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T19:40:27.249328",
+    "query": "What is syntax analysis (parsing)?",
+    "intent": "qa",
+    "answer": "Syntax analysis, also known as Parsing, takes the token stream produced by the lexical analyzer and checks whether it follows the grammatical rules of the programming language. If the structure is valid, the parser builds a parse tree (or syntax tree) that represents the hierarchical structure of the program. If the structure is invalid, it reports syntax errors such as missing semicolons, unmatched parentheses, or incorrect ordering of operators.",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test2.pdf",
+        "page": 1,
+        "chunk_id": "test2.pdf_page1_chunk1",
+        "snippet": "the Syntax Analysis phase, also known as Parsing. \nSyntax analysis takes the token stream produced by the lexical analyzer and checks whether it follo..."
+      },
+      {
+        "ref": 2,
+        "filename": "test2.pdf",
+        "page": 1,
+        "chunk_id": "test2.pdf_page1_chunk0",
+        "snippet": "Unit 2: Syntax Analysis (Parsing) \n \nIn Unit 1, the focus was on breaking the source code into individual units called tokens using lexical analysis...."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T19:40:48.035292",
+    "query": "What is a context-free grammar, and what are its four components?",
+    "intent": "qa",
+    "answer": "A Context-Free Grammar consists of four main components: \n1. Terminals \n2. Non-terminals \n3. Productions \n4. Start Symbol",
+    "trust": {
+      "trust": "low",
+      "reason": "The answer includes details not clearly supported by the retrieved evidence, regardless of how strong that evidence was.",
+      "evidence_level": "high",
+      "grounded": false
+    },
+    "grounded": false,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test2.pdf",
+        "page": 1,
+        "chunk_id": "test2.pdf_page1_chunk3",
+        "snippet": "\u2022 \nNested control statements \u2192 if (x) { if (y) { ... } }  \nA CFG provides a set of rules that specify how valid sentences (programs) in a language can..."
+      },
+      {
+        "ref": 3,
+        "filename": "test2.pdf",
+        "page": 1,
+        "chunk_id": "test2.pdf_page1_chunk2",
+        "snippet": "1. Context-Free Grammar (CFG) \nTo define the syntax of programming languages, compilers use a formal system called a Context-Free Grammar \n(CFG). Unli..."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T19:41:11.274176",
+    "query": "What is a parse tree?",
+    "intent": "qa",
+    "answer": "A Parse Tree is a tree-like structure that shows how a string is generated using the production rules of a Context-Free Grammar (CFG). It starts from the start symbol (root) and expands using grammar rules until it reaches the terminals (leaves).",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test2.pdf",
+        "page": 4,
+        "chunk_id": "test2.pdf_page4_chunk14",
+        "snippet": "1. Parse Tree (Syntax Tree) \nA Parse Tree is a tree-like structure that shows how a string is generated using the production rules of a Context-\nFree..."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T19:41:27.311943",
+    "query": "What does it mean for a grammar to be ambiguous?",
+    "intent": "qa",
+    "answer": "The context does not explicitly mention ambiguity in context-free grammar. However, it does mention that CFGs are powerful enough to describe nested and recursive structures, which can sometimes lead to ambiguity.",
+    "trust": {
+      "trust": "low",
+      "reason": "The answer includes details not clearly supported by the retrieved evidence, regardless of how strong that evidence was.",
+      "evidence_level": "medium",
+      "grounded": false
+    },
+    "grounded": false,
+    "citations": [
+      {
+        "ref": 2,
+        "filename": "test2.pdf",
+        "page": 1,
+        "chunk_id": "test2.pdf_page1_chunk2",
+        "snippet": "1. Context-Free Grammar (CFG) \nTo define the syntax of programming languages, compilers use a formal system called a Context-Free Grammar \n(CFG). Unli..."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T19:41:40.364100",
+    "query": "What is LL(1) parsing, and what does the '1' mean?",
+    "intent": "qa",
+    "answer": "One Lookahead",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 2,
+        "filename": "test2.pdf",
+        "page": 13,
+        "chunk_id": "test2.pdf_page13_chunk37",
+        "snippet": "\u2022 \nSecond L (Leftmost Derivation) \u2192 The parser constructs a leftmost derivation  \n\u2022 \n1 (One Lookahead) \u2192 The parser uses only one next input token to..."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T19:42:01.074359",
+    "query": "What is recursive descent parsing?",
+    "intent": "qa",
+    "answer": "Recursive Descent Parsing is one of the simplest and most intuitive techniques used in top-down parsing. In this approach, the parser is implemented as a set of mutually recursive functions, where each function corresponds to a non-terminal in the grammar.",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test2.pdf",
+        "page": 10,
+        "chunk_id": "test2.pdf_page10_chunk28",
+        "snippet": "closer to the target string. \n \nRecursive Descent Parsing \nRecursive Descent Parsing is one of the simplest and most intuitive techniques used in top-..."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T19:42:23.073562",
+    "query": "What's the difference between top-down and bottom-up parsing?",
+    "intent": "qa",
+    "answer": "Top-down parsing starts from the start symbol and expands downward, whereas bottom-up parsing begins with the input tokens and gradually combines them to reach the start symbol.",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test2.pdf",
+        "page": 16,
+        "chunk_id": "test2.pdf_page16_chunk47",
+        "snippet": "Bottom-Up Parsing: Shift-Reduce and LR Basics  \nIn contrast to top-down parsing, which starts from the start symbol and expands downward, bottom-up pa..."
+      },
+      {
+        "ref": 2,
+        "filename": "test2.pdf",
+        "page": 17,
+        "chunk_id": "test2.pdf_page17_chunk48",
+        "snippet": "In simple terms: \nTop-down = Start \u2192 Input \nBottom-up = Input \u2192 Start \n \nWorking Principle of Bottom-Up Parsing \nBottom-up parsing tries to reverse th..."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T19:42:37.565461",
+    "query": "What is panic mode error recovery?",
+    "intent": "qa",
+    "answer": "Panic mode is the simplest and most widely used error recovery technique. It works by discarding input tokens one by one until it finds a synchronizing token, such as a semicolon or a closing bracket.",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test2.pdf",
+        "page": 20,
+        "chunk_id": "test2.pdf_page20_chunk58",
+        "snippet": "Types of Syntax Errors \nSome common syntax errors include: \n\u2022 \nMissing semicolon \u2192 int x = 10  \n\u2022 \nUnmatched brackets \u2192 (a + b  \n\u2022 \nIncorrect operator..."
+      },
+      {
+        "ref": 3,
+        "filename": "test2.pdf",
+        "page": 20,
+        "chunk_id": "test2.pdf_page20_chunk59",
+        "snippet": "\u2714 Working: \n\u2022 \nWhen an error is detected, the parser discards input tokens one by one  \n\u2022 \nIt continues discarding until it finds a synchronizing toke..."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T19:42:49.235722",
+    "query": "What is database normalization?",
+    "intent": "qa",
+    "answer": "I don't see any information about database normalization in the provided context. \n\nHowever, I can tell you that the context is about Code Optimization in compiler design.",
+    "trust": {
+      "trust": "low",
+      "reason": "The answer is faithful to the retrieved evidence, which was low confidence.",
+      "evidence_level": "low",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test.pdf",
+        "page": 1,
+        "chunk_id": "test.pdf_page1_chunk1",
+        "snippet": "Code Optimization  \nCode Optimization is a crucial phase in compiler design that focuses on improving the efficiency of the \nintermediate code generat..."
+      },
+      {
+        "ref": 2,
+        "filename": "test.pdf",
+        "page": 1,
+        "chunk_id": "test.pdf_page1_chunk4",
+        "snippet": "\u2714 1. Machine-Independent Optimization \nThese optimizations are applied on intermediate code, without considering the target machine architecture. \n Fo..."
+      },
+      {
+        "ref": 3,
+        "filename": "test.pdf",
+        "page": 1,
+        "chunk_id": "test.pdf_page1_chunk2",
+        "snippet": "unchanged. \n  \nOptimization = Better performance without changing result \n \nWhat is Code Optimization? \nCode optimization is the process of transformi..."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T19:43:08.914816",
+    "query": "What is the time complexity of quicksort?",
+    "intent": "qa",
+    "answer": "I couldn't find any information about quicksort time complexity in the provided context.",
+    "trust": {
+      "trust": "low",
+      "reason": "The answer includes details not clearly supported by the retrieved evidence, regardless of how strong that evidence was.",
+      "evidence_level": "low",
+      "grounded": false
+    },
+    "grounded": false,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test2.pdf",
+        "page": 14,
+        "chunk_id": "test2.pdf_page14_chunk40",
+        "snippet": "Explanation of the Parse Tree \n\u2022 \nStart symbol E expands into T E'  \n\u2022 \nT produces id  \n\u2022 \nE' expands into + T E'  \n\u2022 \nSecond T produces id  \n\u2022 \nFinal..."
+      },
+      {
+        "ref": 2,
+        "filename": "test2.pdf",
+        "page": 19,
+        "chunk_id": "test2.pdf_page19_chunk53",
+        "snippet": "Shift-Reduce vs LL (1) \nFeature \nLL(1) (Top-Down) \nLR (Bottom-Up) \nDirection \nTop \u2192 Down \nBottom \u2192 Up \nDerivation \nLeftmost \nRightmost (reverse) \nPowe..."
+      },
+      {
+        "ref": 3,
+        "filename": "test.pdf",
+        "page": 14,
+        "chunk_id": "test.pdf_page14_chunk36",
+        "snippet": "\u2714 Example: \nLOAD R1, a \nSTORE a, R1 \nLOAD R1, a \nRedundant memory operations waste time \n \n\u2714 Solution: \n\u2022 \nMinimize memory access  \n\u2022 \nKeep frequently..."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T19:43:17.051333",
+    "query": "Compare how document A and document B discuss code optimization.",
+    "intent": "compare",
+    "answer": "Document B does not contain sufficient information on this topic to compare (confidence: low).",
+    "trust": null,
+    "grounded": null,
+    "citations": null
+  },
+  {
+    "timestamp": "2026-06-25T19:43:34.452753",
+    "query": "Compare these two documents.",
+    "intent": "compare",
+    "answer": "Document A does not contain sufficient information on this topic to compare (confidence: low).",
+    "trust": null,
+    "grounded": null,
+    "citations": null
+  },
+  {
+    "timestamp": "2026-06-25T20:06:22.135040",
+    "query": "What is code optimization, and why is it needed?",
+    "intent": "qa",
+    "answer": "Code optimization is the process of transforming intermediate code into a more efficient form by reducing unnecessary computations, minimizing memory usage, and improving execution speed, without altering the logic or output of the program.",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test.pdf",
+        "page": 1,
+        "chunk_id": "test.pdf_page1_chunk1",
+        "snippet": "Code Optimization  \nCode Optimization is a crucial phase in compiler design that focuses on improving the efficiency of the \nintermediate code generat..."
+      },
+      {
+        "ref": 2,
+        "filename": "test.pdf",
+        "page": 1,
+        "chunk_id": "test.pdf_page1_chunk2",
+        "snippet": "unchanged. \n  \nOptimization = Better performance without changing result \n \nWhat is Code Optimization? \nCode optimization is the process of transformi..."
+      },
+      {
+        "ref": 3,
+        "filename": "test.pdf",
+        "page": 1,
+        "chunk_id": "test.pdf_page1_chunk3",
+        "snippet": "Why Optimization is Needed \nEven if a program is syntactically and semantically correct, it may still contain redundant or inefficient \ninstructions...."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T20:06:27.924551",
+    "query": "What are the two types of code optimization?",
+    "intent": "qa",
+    "answer": "Code optimization is broadly classified into two categories: \n1. Machine-Independent Optimization",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test.pdf",
+        "page": 1,
+        "chunk_id": "test.pdf_page1_chunk3",
+        "snippet": "Why Optimization is Needed \nEven if a program is syntactically and semantically correct, it may still contain redundant or inefficient \ninstructions...."
+      },
+      {
+        "ref": 2,
+        "filename": "test.pdf",
+        "page": 1,
+        "chunk_id": "test.pdf_page1_chunk4",
+        "snippet": "\u2714 1. Machine-Independent Optimization \nThese optimizations are applied on intermediate code, without considering the target machine architecture. \n Fo..."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T20:06:32.768581",
+    "query": "What is constant folding?",
+    "intent": "qa",
+    "answer": "Constant folding is the process of evaluating constant expressions at compile time instead of runtime.",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test.pdf",
+        "page": 8,
+        "chunk_id": "test.pdf_page8_chunk20",
+        "snippet": "\u2714 Improve execution speed  \n\u2714 Reduce unnecessary computations  \n\u2714 Optimize memory usage  \n\u2714 Make code simpler and cleaner  \n \n1. Constant Folding \nDef..."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T20:06:36.928967",
+    "query": "What is dead code elimination?",
+    "intent": "qa",
+    "answer": "Dead Code Elimination removes code that is never executed or code whose result is never used.",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 2,
+        "filename": "test.pdf",
+        "page": 8,
+        "chunk_id": "test.pdf_page8_chunk21",
+        "snippet": "2. Dead Code Elimination \nDefinition \nDead code elimination removes: \n\u2022 \nCode that is never executed  \n\u2022 \nCode whose result is never used  \n \nExample..."
+      },
+      {
+        "ref": 3,
+        "filename": "test.pdf",
+        "page": 1,
+        "chunk_id": "test.pdf_page1_chunk4",
+        "snippet": "\u2714 1. Machine-Independent Optimization \nThese optimizations are applied on intermediate code, without considering the target machine architecture. \n Fo..."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T20:06:42.098422",
+    "query": "What is a basic block?",
+    "intent": "qa",
+    "answer": "A Basic Block is a sequence of consecutive instructions that has: \n\u2022 One entry point (control enters only at the beginning)  \n\u2022 One exit point (control leaves only at the end)  \n\u2022 No jumps or branches inside the block  \n A straight-line code segment with no interruptions",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test.pdf",
+        "page": 5,
+        "chunk_id": "test.pdf_page5_chunk13",
+        "snippet": "1. Basic Block \n Definition \nA Basic Block is a sequence of consecutive instructions that has: \n\u2022 \n\u2714 One entry point (control enters only at the begin..."
+      },
+      {
+        "ref": 3,
+        "filename": "test.pdf",
+        "page": 5,
+        "chunk_id": "test.pdf_page5_chunk14",
+        "snippet": "\u2714 Intermediate Code: \nt1 = a + b \nt2 = t1 * c \nt3 = t2 - d \n This is a single basic block because: \n\u2022 \nNo jumps  \n\u2022 \nNo labels  \n\u2022 \nExecution is conti..."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T20:06:46.787513",
+    "query": "What is register allocation, and what does 'spilling' mean?",
+    "intent": "qa",
+    "answer": "Register Allocation = Efficiently using limited fast storage (registers)",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test.pdf",
+        "page": 14,
+        "chunk_id": "test.pdf_page14_chunk38",
+        "snippet": "advantage, the compiler tries to keep frequently used variables in registers to improve execution performance. \n  \nRegister Allocation = Efficiently u..."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T20:06:51.699691",
+    "query": "What's the difference between code optimization and code generation?",
+    "intent": "qa",
+    "answer": "Code Optimization focuses on making the program efficient, whereas Code Generation converts the optimized intermediate code into machine-executable code.",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test.pdf",
+        "page": 1,
+        "chunk_id": "test.pdf_page1_chunk0",
+        "snippet": "Unit 4: Code Optimization & Code Generation  \n \nAfter completing Unit 3 (Semantic Analysis & Intermediate Code Generation), the compiler has a clear..."
+      },
+      {
+        "ref": 2,
+        "filename": "test.pdf",
+        "page": 3,
+        "chunk_id": "test.pdf_page3_chunk8",
+        "snippet": "What is Code Generation? \nAfter all analysis and optimization phases are complete, the compiler produces target code, which may be: \n\u2022 \nMachine code (..."
+      },
+      {
+        "ref": 3,
+        "filename": "test.pdf",
+        "page": 3,
+        "chunk_id": "test.pdf_page3_chunk7",
+        "snippet": "Code Generation  \nCode Generation is the final phase of the compiler, where the optimized intermediate code is translated into \nmachine-level instruct..."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T20:06:57.104800",
+    "query": "What are the main challenges in code generation?",
+    "intent": "qa",
+    "answer": "The challenges in Code Generation include dealing with a Limited Number of Registers, where modern CPUs have only a small number of registers, but programs may have many variables and temporary values.",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test.pdf",
+        "page": 13,
+        "chunk_id": "test.pdf_page13_chunk32",
+        "snippet": "Challenges in Code Generation \nThe Code Generation phase is responsible for producing efficient machine code from intermediate code. However, \nthis pr..."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T20:07:15.991562",
+    "query": "What is syntax analysis (parsing)?",
+    "intent": "qa",
+    "answer": "Syntax analysis, also known as Parsing, takes the token stream produced by the lexical analyzer and checks whether it follows the grammatical rules of the programming language. If the structure is valid, the parser builds a parse tree (or syntax tree) that represents the hierarchical structure of the program. If the structure is invalid, it reports syntax errors such as missing semicolons, unmatched parentheses, or incorrect ordering of operators.",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test2.pdf",
+        "page": 1,
+        "chunk_id": "test2.pdf_page1_chunk1",
+        "snippet": "the Syntax Analysis phase, also known as Parsing. \nSyntax analysis takes the token stream produced by the lexical analyzer and checks whether it follo..."
+      },
+      {
+        "ref": 2,
+        "filename": "test2.pdf",
+        "page": 1,
+        "chunk_id": "test2.pdf_page1_chunk0",
+        "snippet": "Unit 2: Syntax Analysis (Parsing) \n \nIn Unit 1, the focus was on breaking the source code into individual units called tokens using lexical analysis...."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T20:07:29.680669",
+    "query": "What is a context-free grammar, and what are its four components?",
+    "intent": "qa",
+    "answer": "Context-Free Grammar (CFG) is a formal system used by compilers to define the syntax of programming languages. It is powerful enough to describe nested and recursive structures.",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test2.pdf",
+        "page": 1,
+        "chunk_id": "test2.pdf_page1_chunk2",
+        "snippet": "1. Context-Free Grammar (CFG) \nTo define the syntax of programming languages, compilers use a formal system called a Context-Free Grammar \n(CFG). Unli..."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T20:07:52.355871",
+    "query": "What is a parse tree?",
+    "intent": "qa",
+    "answer": "A Parse Tree (Syntax Tree) is a tree-like structure that shows how a string is generated using the production rules of a Context-Free Grammar (CFG). It starts from the start symbol (root) and expands using grammar rules until it reaches the terminals (leaves).",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test2.pdf",
+        "page": 4,
+        "chunk_id": "test2.pdf_page4_chunk14",
+        "snippet": "1. Parse Tree (Syntax Tree) \nA Parse Tree is a tree-like structure that shows how a string is generated using the production rules of a Context-\nFree..."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T20:08:06.097695",
+    "query": "What does it mean for a grammar to be ambiguous?",
+    "intent": "qa",
+    "answer": "A grammar is said to be ambiguous if a single input string can be represented by more than one distinct parse tree.",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test2.pdf",
+        "page": 5,
+        "chunk_id": "test2.pdf_page5_chunk15",
+        "snippet": "Example of Parse Tree \nConsider the expression: \n2 + 3 * 4 \nUsing a simple grammar: \nExpr \u2192 Expr + Expr \nExpr \u2192 Expr * Expr \nExpr \u2192 number \n \n\u2714 Parse..."
+      },
+      {
+        "ref": 3,
+        "filename": "test2.pdf",
+        "page": 4,
+        "chunk_id": "test2.pdf_page4_chunk13",
+        "snippet": "represents this structure using a Parse Tree (also called a Syntax Tree). This tree provides a hierarchical and \nvisual representation of how a string..."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T20:08:28.049628",
+    "query": "What is LL(1) parsing, and what does the '1' mean?",
+    "intent": "qa",
+    "answer": "LL(1) parsing is a table-driven method that uses a parsing table to decide which production rule to apply at each step. It is also called a predictive parser because it can predict the correct rule using only limited information. The '1' in LL(1) refers to 'One Lookahead', meaning the parser uses only one next input token to make decisions.",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test2.pdf",
+        "page": 12,
+        "chunk_id": "test2.pdf_page12_chunk36",
+        "snippet": "descent (which uses functions), LL(1) parsing is a table-driven method that uses a parsing table to decide which \nproduction rule to apply at each ste..."
+      },
+      {
+        "ref": 2,
+        "filename": "test2.pdf",
+        "page": 13,
+        "chunk_id": "test2.pdf_page13_chunk37",
+        "snippet": "\u2022 \nSecond L (Leftmost Derivation) \u2192 The parser constructs a leftmost derivation  \n\u2022 \n1 (One Lookahead) \u2192 The parser uses only one next input token to..."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T20:08:51.941873",
+    "query": "What is recursive descent parsing?",
+    "intent": "qa",
+    "answer": "Recursive Descent Parsing is one of the simplest and most intuitive techniques used in top-down parsing, implemented as a set of mutually recursive functions, where each function corresponds to a non-terminal in the grammar.",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test2.pdf",
+        "page": 10,
+        "chunk_id": "test2.pdf_page10_chunk28",
+        "snippet": "closer to the target string. \n \nRecursive Descent Parsing \nRecursive Descent Parsing is one of the simplest and most intuitive techniques used in top-..."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T20:09:14.743453",
+    "query": "What's the difference between top-down and bottom-up parsing?",
+    "intent": "qa",
+    "answer": "Top-down parsing starts from the start symbol and expands downward, whereas bottom-up parsing begins with the input tokens and gradually combines them to reach the start symbol, often described as \"building the parse tree from leaves to root\".",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test2.pdf",
+        "page": 16,
+        "chunk_id": "test2.pdf_page16_chunk47",
+        "snippet": "Bottom-Up Parsing: Shift-Reduce and LR Basics  \nIn contrast to top-down parsing, which starts from the start symbol and expands downward, bottom-up pa..."
+      },
+      {
+        "ref": 2,
+        "filename": "test2.pdf",
+        "page": 17,
+        "chunk_id": "test2.pdf_page17_chunk48",
+        "snippet": "In simple terms: \nTop-down = Start \u2192 Input \nBottom-up = Input \u2192 Start \n \nWorking Principle of Bottom-Up Parsing \nBottom-up parsing tries to reverse th..."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T20:09:28.663299",
+    "query": "What is panic mode error recovery?",
+    "intent": "qa",
+    "answer": "Panic mode is the simplest and most widely used error recovery technique. It works by discarding input tokens one by one until it finds a synchronizing token, such as a semicolon or a closing bracket.",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test2.pdf",
+        "page": 20,
+        "chunk_id": "test2.pdf_page20_chunk58",
+        "snippet": "Types of Syntax Errors \nSome common syntax errors include: \n\u2022 \nMissing semicolon \u2192 int x = 10  \n\u2022 \nUnmatched brackets \u2192 (a + b  \n\u2022 \nIncorrect operator..."
+      },
+      {
+        "ref": 3,
+        "filename": "test2.pdf",
+        "page": 20,
+        "chunk_id": "test2.pdf_page20_chunk59",
+        "snippet": "\u2714 Working: \n\u2022 \nWhen an error is detected, the parser discards input tokens one by one  \n\u2022 \nIt continues discarding until it finds a synchronizing toke..."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T20:09:41.884457",
+    "query": "What is database normalization?",
+    "intent": "qa",
+    "answer": "I don't see any information about database normalization in the provided context. \n\nHowever, the context does discuss code optimization, which is a different topic.",
+    "trust": {
+      "trust": "low",
+      "reason": "The answer is faithful to the retrieved evidence, which was low confidence.",
+      "evidence_level": "low",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test.pdf",
+        "page": 1,
+        "chunk_id": "test.pdf_page1_chunk1",
+        "snippet": "Code Optimization  \nCode Optimization is a crucial phase in compiler design that focuses on improving the efficiency of the \nintermediate code generat..."
+      },
+      {
+        "ref": 2,
+        "filename": "test.pdf",
+        "page": 1,
+        "chunk_id": "test.pdf_page1_chunk4",
+        "snippet": "\u2714 1. Machine-Independent Optimization \nThese optimizations are applied on intermediate code, without considering the target machine architecture. \n Fo..."
+      },
+      {
+        "ref": 3,
+        "filename": "test.pdf",
+        "page": 1,
+        "chunk_id": "test.pdf_page1_chunk2",
+        "snippet": "unchanged. \n  \nOptimization = Better performance without changing result \n \nWhat is Code Optimization? \nCode optimization is the process of transformi..."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T20:10:01.923543",
+    "query": "What is the time complexity of quicksort?",
+    "intent": "qa",
+    "answer": "I don't have any information about quicksort time complexity in the provided context.",
+    "trust": {
+      "trust": "low",
+      "reason": "The answer includes details not clearly supported by the retrieved evidence, regardless of how strong that evidence was.",
+      "evidence_level": "low",
+      "grounded": false
+    },
+    "grounded": false,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test2.pdf",
+        "page": 14,
+        "chunk_id": "test2.pdf_page14_chunk40",
+        "snippet": "Explanation of the Parse Tree \n\u2022 \nStart symbol E expands into T E'  \n\u2022 \nT produces id  \n\u2022 \nE' expands into + T E'  \n\u2022 \nSecond T produces id  \n\u2022 \nFinal..."
+      },
+      {
+        "ref": 2,
+        "filename": "test2.pdf",
+        "page": 19,
+        "chunk_id": "test2.pdf_page19_chunk53",
+        "snippet": "Shift-Reduce vs LL (1) \nFeature \nLL(1) (Top-Down) \nLR (Bottom-Up) \nDirection \nTop \u2192 Down \nBottom \u2192 Up \nDerivation \nLeftmost \nRightmost (reverse) \nPowe..."
+      },
+      {
+        "ref": 3,
+        "filename": "test.pdf",
+        "page": 14,
+        "chunk_id": "test.pdf_page14_chunk36",
+        "snippet": "\u2714 Example: \nLOAD R1, a \nSTORE a, R1 \nLOAD R1, a \nRedundant memory operations waste time \n \n\u2714 Solution: \n\u2022 \nMinimize memory access  \n\u2022 \nKeep frequently..."
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T20:10:13.089519",
+    "query": "Compare how document A and document B discuss code optimization.",
+    "intent": "compare",
+    "answer": "Document B does not contain sufficient information on this topic to compare (confidence: low).",
+    "trust": null,
+    "grounded": null,
+    "citations": null
+  },
+  {
+    "timestamp": "2026-06-25T20:10:21.369956",
+    "query": "Compare these two documents.",
+    "intent": "compare",
+    "answer": "Document A does not contain sufficient information on this topic to compare (confidence: low).",
+    "trust": null,
+    "grounded": null,
+    "citations": null
+  }
+]

@@ -1,0 +1,654 @@
+[
+  {
+    "id": 1,
+    "query": "What is code optimization, and why is it needed?",
+    "expected_intent": "qa",
+    "actual_intent": "qa",
+    "answer": "Code optimization is the process of transforming intermediate code into a more efficient form by reducing unnecessary computations, minimizing memory usage, and improving execution speed, without altering the logic or output of the program.",
+    "note": "",
+    "confidence": {
+      "score": 0.89,
+      "level": "high",
+      "top_rerank_score": 10.5,
+      "avg_rerank_score": 9.45
+    },
+    "hallucination": {
+      "grounded": true,
+      "coverage": 1.0,
+      "claims": [
+        {
+          "claim": "Code optimization is the process of transforming intermediate code into a more efficient form by reducing unnecessary computations, minimizing memory usage, and improving execution speed, without altering the logic or output of the program.",
+          "supported": true
+        }
+      ],
+      "reason": "All 1 claim(s) are supported by the source text."
+    },
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "retries": 0
+  },
+  {
+    "id": 2,
+    "query": "What are the two types of code optimization?",
+    "expected_intent": "qa",
+    "actual_intent": "qa",
+    "answer": "Code optimization is broadly classified into two categories: \n1. Machine-Independent Optimization",
+    "note": "",
+    "confidence": {
+      "score": 0.84,
+      "level": "high",
+      "top_rerank_score": 8.4,
+      "avg_rerank_score": 6.93
+    },
+    "hallucination": {
+      "grounded": true,
+      "coverage": 1.0,
+      "claims": [
+        {
+          "claim": "Code optimization is broadly classified into two categories: \n1.",
+          "supported": true
+        },
+        {
+          "claim": "Machine-Independent Optimization",
+          "supported": true
+        }
+      ],
+      "reason": "All 2 claim(s) are supported by the source text."
+    },
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "retries": 1
+  },
+  {
+    "id": 3,
+    "query": "What is constant folding?",
+    "expected_intent": "qa",
+    "actual_intent": "qa",
+    "answer": "Constant folding is the process of evaluating constant expressions at compile time instead of runtime.",
+    "note": "",
+    "confidence": {
+      "score": 0.86,
+      "level": "high",
+      "top_rerank_score": 9.14,
+      "avg_rerank_score": 5.82
+    },
+    "hallucination": {
+      "grounded": true,
+      "coverage": 1.0,
+      "claims": [
+        {
+          "claim": "Constant folding is the process of evaluating constant expressions at compile time instead of runtime.",
+          "supported": true
+        }
+      ],
+      "reason": "All 1 claim(s) are supported by the source text."
+    },
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "retries": 0
+  },
+  {
+    "id": 4,
+    "query": "What is dead code elimination?",
+    "expected_intent": "qa",
+    "actual_intent": "qa",
+    "answer": "Dead Code Elimination removes code that is never executed or code whose result is never used.",
+    "note": "",
+    "confidence": {
+      "score": 0.85,
+      "level": "high",
+      "top_rerank_score": 8.61,
+      "avg_rerank_score": 7.54
+    },
+    "hallucination": {
+      "grounded": true,
+      "coverage": 1.0,
+      "claims": [
+        {
+          "claim": "Dead Code Elimination removes code that is never executed or code whose result is never used.",
+          "supported": true
+        }
+      ],
+      "reason": "All 1 claim(s) are supported by the source text."
+    },
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "retries": 0
+  },
+  {
+    "id": 5,
+    "query": "What is a basic block?",
+    "expected_intent": "qa",
+    "actual_intent": "qa",
+    "answer": "A Basic Block is a sequence of consecutive instructions that has: \n\u2022 One entry point (control enters only at the beginning)  \n\u2022 One exit point (control leaves only at the end)  \n\u2022 No jumps or branches inside the block  \n A straight-line code segment with no interruptions",
+    "note": "",
+    "confidence": {
+      "score": 0.88,
+      "level": "high",
+      "top_rerank_score": 10.19,
+      "avg_rerank_score": 7.98
+    },
+    "hallucination": {
+      "grounded": true,
+      "coverage": 1.0,
+      "claims": [
+        {
+          "claim": "A Basic Block is a sequence of consecutive instructions that has: \n\u2022 One entry point (control enters only at the beginning)  \n\u2022 One exit point (control leaves only at the end)  \n\u2022 No jumps or branches inside the block  \n A straight-line code segment with no interruptions",
+          "supported": true
+        }
+      ],
+      "reason": "All 1 claim(s) are supported by the source text."
+    },
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "retries": 0
+  },
+  {
+    "id": 6,
+    "query": "What is register allocation, and what does 'spilling' mean?",
+    "expected_intent": "qa",
+    "actual_intent": "qa",
+    "answer": "Register Allocation = Efficiently using limited fast storage (registers)",
+    "note": "",
+    "confidence": {
+      "score": 0.83,
+      "level": "high",
+      "top_rerank_score": 7.99,
+      "avg_rerank_score": 6.78
+    },
+    "hallucination": {
+      "grounded": true,
+      "coverage": 1.0,
+      "claims": [
+        {
+          "claim": "Register Allocation = Efficiently using limited fast storage (registers)",
+          "supported": true
+        }
+      ],
+      "reason": "All 1 claim(s) are supported by the source text."
+    },
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "retries": 0
+  },
+  {
+    "id": 7,
+    "query": "What's the difference between code optimization and code generation?",
+    "expected_intent": "qa",
+    "actual_intent": "qa",
+    "answer": "Code Optimization focuses on making the program efficient, whereas Code Generation converts the optimized intermediate code into machine-executable code.",
+    "note": "",
+    "confidence": {
+      "score": 0.83,
+      "level": "high",
+      "top_rerank_score": 7.99,
+      "avg_rerank_score": 7.22
+    },
+    "hallucination": {
+      "grounded": true,
+      "coverage": 1.0,
+      "claims": [
+        {
+          "claim": "Code Optimization focuses on making the program efficient, whereas Code Generation converts the optimized intermediate code into machine-executable code.",
+          "supported": true
+        }
+      ],
+      "reason": "All 1 claim(s) are supported by the source text."
+    },
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "retries": 0
+  },
+  {
+    "id": 8,
+    "query": "What are the main challenges in code generation?",
+    "expected_intent": "qa",
+    "actual_intent": "qa",
+    "answer": "The challenges in Code Generation include dealing with a Limited Number of Registers, where modern CPUs have only a small number of registers, but programs may have many variables and temporary values.",
+    "note": "",
+    "confidence": {
+      "score": 0.86,
+      "level": "high",
+      "top_rerank_score": 9.15,
+      "avg_rerank_score": 5.2
+    },
+    "hallucination": {
+      "grounded": true,
+      "coverage": 1.0,
+      "claims": [
+        {
+          "claim": "The challenges in Code Generation include dealing with a Limited Number of Registers, where modern CPUs have only a small number of registers, but programs may have many variables and temporary values.",
+          "supported": true
+        }
+      ],
+      "reason": "All 1 claim(s) are supported by the source text."
+    },
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "retries": 0
+  },
+  {
+    "id": 9,
+    "query": "What is syntax analysis (parsing)?",
+    "expected_intent": "qa",
+    "actual_intent": "qa",
+    "answer": "Syntax analysis, also known as Parsing, takes the token stream produced by the lexical analyzer and checks whether it follows the grammatical rules of the programming language. If the structure is valid, the parser builds a parse tree (or syntax tree) that represents the hierarchical structure of the program. If the structure is invalid, it reports syntax errors such as missing semicolons, unmatched parentheses, or incorrect ordering of operators.",
+    "note": "",
+    "confidence": {
+      "score": 0.87,
+      "level": "high",
+      "top_rerank_score": 9.56,
+      "avg_rerank_score": 8.15
+    },
+    "hallucination": {
+      "grounded": true,
+      "coverage": 1.0,
+      "claims": [
+        {
+          "claim": "Syntax analysis, also known as Parsing, takes the token stream produced by the lexical analyzer and checks whether it follows the grammatical rules of the programming language.",
+          "supported": true
+        },
+        {
+          "claim": "If the structure is valid, the parser builds a parse tree (or syntax tree) that represents the hierarchical structure of the program.",
+          "supported": true
+        },
+        {
+          "claim": "If the structure is invalid, it reports syntax errors such as missing semicolons, unmatched parentheses, or incorrect ordering of operators.",
+          "supported": true
+        }
+      ],
+      "reason": "All 3 claim(s) are supported by the source text."
+    },
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "retries": 0
+  },
+  {
+    "id": 10,
+    "query": "What is a context-free grammar, and what are its four components?",
+    "expected_intent": "qa",
+    "actual_intent": "qa",
+    "answer": "Context-Free Grammar (CFG) is a formal system used by compilers to define the syntax of programming languages. It is powerful enough to describe nested and recursive structures.",
+    "note": "",
+    "confidence": {
+      "score": 0.87,
+      "level": "high",
+      "top_rerank_score": 9.46,
+      "avg_rerank_score": 8.87
+    },
+    "hallucination": {
+      "grounded": true,
+      "coverage": 1.0,
+      "claims": [
+        {
+          "claim": "Context-Free Grammar (CFG) is a formal system used by compilers to define the syntax of programming languages.",
+          "supported": true
+        },
+        {
+          "claim": "It is powerful enough to describe nested and recursive structures.",
+          "supported": true
+        }
+      ],
+      "reason": "All 2 claim(s) are supported by the source text."
+    },
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "retries": 0
+  },
+  {
+    "id": 11,
+    "query": "What is a parse tree?",
+    "expected_intent": "qa",
+    "actual_intent": "qa",
+    "answer": "A Parse Tree (Syntax Tree) is a tree-like structure that shows how a string is generated using the production rules of a Context-Free Grammar (CFG). It starts from the start symbol (root) and expands using grammar rules until it reaches the terminals (leaves).",
+    "note": "",
+    "confidence": {
+      "score": 0.88,
+      "level": "high",
+      "top_rerank_score": 9.76,
+      "avg_rerank_score": 7.37
+    },
+    "hallucination": {
+      "grounded": true,
+      "coverage": 1.0,
+      "claims": [
+        {
+          "claim": "A Parse Tree (Syntax Tree) is a tree-like structure that shows how a string is generated using the production rules of a Context-Free Grammar (CFG).",
+          "supported": true
+        },
+        {
+          "claim": "It starts from the start symbol (root) and expands using grammar rules until it reaches the terminals (leaves).",
+          "supported": true
+        }
+      ],
+      "reason": "All 2 claim(s) are supported by the source text."
+    },
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "retries": 0
+  },
+  {
+    "id": 12,
+    "query": "What does it mean for a grammar to be ambiguous?",
+    "expected_intent": "qa",
+    "actual_intent": "qa",
+    "answer": "A grammar is said to be ambiguous if a single input string can be represented by more than one distinct parse tree.",
+    "note": "",
+    "confidence": {
+      "score": 0.78,
+      "level": "high",
+      "top_rerank_score": 6.19,
+      "avg_rerank_score": 5.88
+    },
+    "hallucination": {
+      "grounded": true,
+      "coverage": 1.0,
+      "claims": [
+        {
+          "claim": "A grammar is said to be ambiguous if a single input string can be represented by more than one distinct parse tree.",
+          "supported": true
+        }
+      ],
+      "reason": "All 1 claim(s) are supported by the source text."
+    },
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "retries": 0
+  },
+  {
+    "id": 13,
+    "query": "What is LL(1) parsing, and what does the '1' mean?",
+    "expected_intent": "qa",
+    "actual_intent": "qa",
+    "answer": "LL(1) parsing is a table-driven method that uses a parsing table to decide which production rule to apply at each step. It is also called a predictive parser because it can predict the correct rule using only limited information. The '1' in LL(1) refers to 'One Lookahead', meaning the parser uses only one next input token to make decisions.",
+    "note": "",
+    "confidence": {
+      "score": 0.82,
+      "level": "high",
+      "top_rerank_score": 7.58,
+      "avg_rerank_score": 5.62
+    },
+    "hallucination": {
+      "grounded": true,
+      "coverage": 1.0,
+      "claims": [
+        {
+          "claim": "LL(1) parsing is a table-driven method that uses a parsing table to decide which production rule to apply at each step.",
+          "supported": true
+        },
+        {
+          "claim": "It is also called a predictive parser because it can predict the correct rule using only limited information.",
+          "supported": true
+        },
+        {
+          "claim": "The '1' in LL(1) refers to 'One Lookahead', meaning the parser uses only one next input token to make decisions.",
+          "supported": true
+        }
+      ],
+      "reason": "All 3 claim(s) are supported by the source text."
+    },
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "retries": 0
+  },
+  {
+    "id": 14,
+    "query": "What is recursive descent parsing?",
+    "expected_intent": "qa",
+    "actual_intent": "qa",
+    "answer": "Recursive Descent Parsing is one of the simplest and most intuitive techniques used in top-down parsing, implemented as a set of mutually recursive functions, where each function corresponds to a non-terminal in the grammar.",
+    "note": "",
+    "confidence": {
+      "score": 0.89,
+      "level": "high",
+      "top_rerank_score": 10.38,
+      "avg_rerank_score": 8.48
+    },
+    "hallucination": {
+      "grounded": true,
+      "coverage": 1.0,
+      "claims": [
+        {
+          "claim": "Recursive Descent Parsing is one of the simplest and most intuitive techniques used in top-down parsing, implemented as a set of mutually recursive functions, where each function corresponds to a non-terminal in the grammar.",
+          "supported": true
+        }
+      ],
+      "reason": "All 1 claim(s) are supported by the source text."
+    },
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "retries": 0
+  },
+  {
+    "id": 15,
+    "query": "What's the difference between top-down and bottom-up parsing?",
+    "expected_intent": "qa",
+    "actual_intent": "qa",
+    "answer": "Top-down parsing starts from the start symbol and expands downward, whereas bottom-up parsing begins with the input tokens and gradually combines them to reach the start symbol, often described as \"building the parse tree from leaves to root\".",
+    "note": "",
+    "confidence": {
+      "score": 0.84,
+      "level": "high",
+      "top_rerank_score": 8.34,
+      "avg_rerank_score": 6.86
+    },
+    "hallucination": {
+      "grounded": true,
+      "coverage": 1.0,
+      "claims": [
+        {
+          "claim": "Top-down parsing starts from the start symbol and expands downward, whereas bottom-up parsing begins with the input tokens and gradually combines them to reach the start symbol, often described as \"building the parse tree from leaves to root\".",
+          "supported": true
+        }
+      ],
+      "reason": "All 1 claim(s) are supported by the source text."
+    },
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "retries": 0
+  },
+  {
+    "id": 16,
+    "query": "What is panic mode error recovery?",
+    "expected_intent": "qa",
+    "actual_intent": "qa",
+    "answer": "Panic mode is the simplest and most widely used error recovery technique. It works by discarding input tokens one by one until it finds a synchronizing token, such as a semicolon or a closing bracket.",
+    "note": "",
+    "confidence": {
+      "score": 0.77,
+      "level": "high",
+      "top_rerank_score": 6.15,
+      "avg_rerank_score": 4.0
+    },
+    "hallucination": {
+      "grounded": true,
+      "coverage": 1.0,
+      "claims": [
+        {
+          "claim": "Panic mode is the simplest and most widely used error recovery technique.",
+          "supported": true
+        },
+        {
+          "claim": "It works by discarding input tokens one by one until it finds a synchronizing token, such as a semicolon or a closing bracket.",
+          "supported": true
+        }
+      ],
+      "reason": "All 2 claim(s) are supported by the source text."
+    },
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "retries": 0
+  },
+  {
+    "id": 17,
+    "query": "What is database normalization?",
+    "expected_intent": "qa",
+    "actual_intent": "qa",
+    "answer": "I don't see any information about database normalization in the provided context. \n\nHowever, the context does discuss code optimization, which is a different topic.",
+    "note": "out-of-corpus, should refuse gracefully, not hallucinate",
+    "confidence": {
+      "score": 0.11,
+      "level": "low",
+      "top_rerank_score": -10.43,
+      "avg_rerank_score": -10.85
+    },
+    "hallucination": {
+      "grounded": true,
+      "coverage": 1.0,
+      "claims": [
+        {
+          "claim": "I don't see any information about database normalization in the provided context.",
+          "supported": true
+        },
+        {
+          "claim": "However, the context does discuss code optimization, which is a different topic.",
+          "supported": true
+        }
+      ],
+      "reason": "All 2 claim(s) are supported by the source text."
+    },
+    "trust": {
+      "trust": "low",
+      "reason": "The answer is faithful to the retrieved evidence, which was low confidence.",
+      "evidence_level": "low",
+      "grounded": true
+    },
+    "retries": 0
+  },
+  {
+    "id": 18,
+    "query": "What is the time complexity of quicksort?",
+    "expected_intent": "qa",
+    "actual_intent": "qa",
+    "answer": "I don't have any information about quicksort time complexity in the provided context.",
+    "note": "out-of-corpus, should refuse gracefully, not hallucinate",
+    "confidence": {
+      "score": 0.19,
+      "level": "low",
+      "top_rerank_score": -7.25,
+      "avg_rerank_score": -9.06
+    },
+    "hallucination": {
+      "grounded": false,
+      "coverage": 0.0,
+      "claims": [
+        {
+          "claim": "I don't have any information about quicksort time complexity in the provided context.",
+          "supported": false
+        }
+      ],
+      "reason": "1 of 1 claim(s) not supported, e.g.: \"I don't have any information about quicksort time complexity in the provided context.\""
+    },
+    "trust": {
+      "trust": "low",
+      "reason": "The answer includes details not clearly supported by the retrieved evidence, regardless of how strong that evidence was.",
+      "evidence_level": "low",
+      "grounded": false
+    },
+    "retries": 1
+  },
+  {
+    "id": 19,
+    "query": "Compare how document A and document B discuss code optimization.",
+    "expected_intent": "compare",
+    "actual_intent": "compare",
+    "answer": "Document B does not contain sufficient information on this topic to compare (confidence: low).",
+    "note": "doc B has nothing on this topic, should trigger relevance gate",
+    "confidence_a": {
+      "score": 0.89,
+      "level": "high",
+      "top_rerank_score": 10.5,
+      "avg_rerank_score": 9.45
+    },
+    "confidence_b": {
+      "score": 0.32,
+      "level": "low",
+      "top_rerank_score": -3.83,
+      "avg_rerank_score": -4.0
+    }
+  },
+  {
+    "id": 20,
+    "query": "Compare these two documents.",
+    "expected_intent": "compare",
+    "actual_intent": "compare",
+    "answer": "Document A does not contain sufficient information on this topic to compare (confidence: low).",
+    "note": "vague topic, tests planner's topic extraction",
+    "confidence_a": {
+      "score": 0.1,
+      "level": "low",
+      "top_rerank_score": -11.1,
+      "avg_rerank_score": -11.12
+    },
+    "confidence_b": {
+      "score": 0.13,
+      "level": "low",
+      "top_rerank_score": -9.38,
+      "avg_rerank_score": -10.38
+    }
+  }
+]

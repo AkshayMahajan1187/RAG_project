@@ -1,0 +1,84 @@
+[
+  {
+    "timestamp": "2026-06-28T13:29:53.446255",
+    "query": "what is basic blocks",
+    "intent": "qa",
+    "answer": "A Basic Block is a sequence of consecutive instructions that has: \n\u2022 One entry point (control enters only at the beginning)  \n\u2022 One exit point (control leaves only at the end)  \n\u2022 No jumps or branches inside the block  \n A straight-line code segment with no interruptions \n\n Key Characteristics \n\u2022 No branching except at the end  \n\u2022 Executes sequentially  \n\u2022 Always executed as a whole",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test.pdf",
+        "page": 5,
+        "chunk_id": "test.pdf_page5_chunk13",
+        "snippet": "1. Basic Block \n Definition \nA Basic Block is a sequence of consecutive instructions that has: \n\u2022 \n\u2714 One entry point (control enters only at the begin..."
+      },
+      {
+        "ref": 2,
+        "filename": "unit4.pdf",
+        "page": 5,
+        "chunk_id": "unit4.pdf_page5_chunk13",
+        "snippet": "1. Basic Block \n Definition \nA Basic Block is a sequence of consecutive instructions that has: \n\u2022 \n\u2714 One entry point (control enters only at the begin..."
+      }
+    ],
+    "file_a": null,
+    "file_b": null,
+    "confidence_a": null,
+    "confidence_b": null
+  },
+  {
+    "timestamp": "2026-06-28T13:35:30.564386",
+    "query": "compare parse tree from both the docs",
+    "intent": "compare",
+    "answer": "Document A does not contain sufficient information on this topic to compare (confidence: low).",
+    "trust": null,
+    "grounded": null,
+    "citations": null,
+    "file_a": "test.pdf",
+    "file_b": "test2.pdf",
+    "confidence_a": {
+      "score": 0.1,
+      "level": "low",
+      "top_rerank_score": -11.08,
+      "avg_rerank_score": -11.23
+    },
+    "confidence_b": {
+      "score": 0.88,
+      "level": "high",
+      "top_rerank_score": 9.85,
+      "avg_rerank_score": 8.29
+    }
+  },
+  {
+    "timestamp": "2026-06-28T13:35:46.363667",
+    "query": "what is parse tree",
+    "intent": "qa",
+    "answer": "A Parse Tree (Syntax Tree) is a tree-like structure that shows how a string is generated using the production rules of a Context-Free Grammar (CFG). It starts from the start symbol (root) and expands using grammar rules until it reaches the terminals (leaves). The key properties of a Parse Tree are:\n- Root node \u2192 Start symbol  \n- Internal nodes \u2192 Non-terminals  \n- Leaf nodes \u2192 Terminals (actual tokens)  \n- Shows step-by-step derivation of a string",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test2.pdf",
+        "page": 4,
+        "chunk_id": "test2.pdf_page4_chunk14",
+        "snippet": "1. Parse Tree (Syntax Tree) \nA Parse Tree is a tree-like structure that shows how a string is generated using the production rules of a Context-\nFree..."
+      }
+    ],
+    "file_a": null,
+    "file_b": null,
+    "confidence_a": null,
+    "confidence_b": null
+  }
+]

@@ -1,0 +1,169 @@
+[
+  {
+    "timestamp": "2026-06-27T19:00:06.588683",
+    "query": "what is basic blocks",
+    "intent": "qa",
+    "answer": "A Basic Block is a sequence of consecutive instructions that has: \n\u2022 One entry point (control enters only at the beginning)  \n\u2022 One exit point (control leaves only at the end)  \n\u2022 No jumps or branches inside the block  \n A straight-line code segment with no interruptions \n\n Key Characteristics \n\u2022 No branching except at the end  \n\u2022 Executes sequentially  \n\u2022 Always executed as a whole",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test.pdf",
+        "page": 5,
+        "chunk_id": "test.pdf_page5_chunk13",
+        "snippet": "1. Basic Block \n Definition \nA Basic Block is a sequence of consecutive instructions that has: \n\u2022 \n\u2714 One entry point (control enters only at the begin..."
+      },
+      {
+        "ref": 2,
+        "filename": "unit4.pdf",
+        "page": 5,
+        "chunk_id": "unit4.pdf_page5_chunk13",
+        "snippet": "1. Basic Block \n Definition \nA Basic Block is a sequence of consecutive instructions that has: \n\u2022 \n\u2714 One entry point (control enters only at the begin..."
+      }
+    ],
+    "file_a": null,
+    "file_b": null,
+    "confidence_a": null,
+    "confidence_b": null
+  },
+  {
+    "timestamp": "2026-06-27T19:03:47.955535",
+    "query": "what is it used for ",
+    "intent": "qa",
+    "answer": "Basic Blocks are used to represent uninterrupted sequences of instructions, and they provide a clear framework for applying optimization techniques, ultimately leading to more efficient and faster executable code.",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 3,
+        "filename": "test.pdf",
+        "page": 7,
+        "chunk_id": "test.pdf_page7_chunk18",
+        "snippet": "flow of a program. Basic blocks represent uninterrupted sequences of instructions, while flow graphs map the \nexecution paths between these blocks. To..."
+      }
+    ],
+    "file_a": null,
+    "file_b": null,
+    "confidence_a": null,
+    "confidence_b": null
+  },
+  {
+    "timestamp": "2026-06-27T19:07:48.527047",
+    "query": "what is parse tree",
+    "intent": "qa",
+    "answer": "A Parse Tree (Syntax Tree) is a tree-like structure that shows how a string is generated using the production rules of a Context-Free Grammar (CFG). It starts from the start symbol (root) and expands using grammar rules until it reaches the terminals (leaves). \n\n\u2714 Key Properties: \n\u2022 Root node \u2192 Start symbol  \n\u2022 Internal nodes \u2192 Non-terminals  \n\u2022 Leaf nodes \u2192 Terminals (actual tokens)  \n\u2022 Shows step-by-step derivation of a string",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test2.pdf",
+        "page": 4,
+        "chunk_id": "test2.pdf_page4_chunk14",
+        "snippet": "1. Parse Tree (Syntax Tree) \nA Parse Tree is a tree-like structure that shows how a string is generated using the production rules of a Context-\nFree..."
+      }
+    ],
+    "file_a": null,
+    "file_b": null,
+    "confidence_a": null,
+    "confidence_b": null
+  },
+  {
+    "timestamp": "2026-06-27T19:08:21.257516",
+    "query": "campare it from both the docs ",
+    "intent": "compare",
+    "answer": "Based on the provided excerpts from Document A and Document B, here are the key similarities and differences in how they address the topic of Basic Blocks vs Parse Tree:\n\n**Similarities:**\n\n1. Both documents discuss the concept of a hierarchical structure for representing program flow and syntax.\n2. Document A mentions that Basic Blocks represent uninterrupted sequences of instructions, while Document B describes a Parse Tree as a tree-like structure showing how a string is generated using production rules of a Context-Free Grammar (CFG).\n3. Both documents use visual representations (e.g., flow graphs and parse trees) to illustrate their concepts.\n\n**Differences:**\n\n1. **Focus:** Document A focuses on Basic Blocks, discussing their definition, characteristics, and examples, while Document B focuses on Parse Trees, explaining their structure, properties, and applications.\n2. **Definition:** Document A defines a Basic Block as a sequence of consecutive instructions with a single entry point, exit point, and no jumps or branches inside the block. Document B defines a Parse Tree as a tree-like structure showing how a string is generated using production rules of a CFG.\n3. **Purpose:** Document A mentions that Basic Blocks are used to represent uninterrupted sequences of instructions, which helps in applying optimization techniques for more efficient and faster executable code. Document B describes Parse Trees as providing a hierarchical and visual representation of how a string (program) is derived from the grammar's start symbol.\n4. **Comparison:** Document A provides an example of a single Basic Block and multiple Basic Blocks, while Document B does not compare Parse Trees with Basic Blocks.\n5. **Context:** Document A discusses Basic Blocks in the context of compiler design and optimization, while Document B discusses Parse Trees in the context of parsing algorithms and ambiguity in grammars.\n\n**Missing information:**\n\n1. Document A does not discuss Parse Trees, while Document B does not discuss Basic Blocks.\n2. Document A does not mention the concept of ambiguity in grammars, while Document B mentions it briefly in the context of Parse Trees.\n3. Document B does not discuss the optimization techniques that can be applied using Basic Blocks, while Document A mentions that Basic Blocks help in applying optimization techniques for more efficient and faster executable code.",
+    "trust": null,
+    "grounded": null,
+    "citations": null,
+    "file_a": "test.pdf",
+    "file_b": "test2.pdf",
+    "confidence_a": {
+      "score": 0.62,
+      "level": "medium",
+      "top_rerank_score": 2.44,
+      "avg_rerank_score": 0.44
+    },
+    "confidence_b": {
+      "score": 0.61,
+      "level": "medium",
+      "top_rerank_score": 2.21,
+      "avg_rerank_score": 1.22
+    }
+  },
+  {
+    "timestamp": "2026-06-27T19:09:29.926646",
+    "query": "no i mean compare parse tree only from both the docs ",
+    "intent": "qa",
+    "answer": "A Parse Tree is a tree-like structure that shows how a string is generated using the production rules of a Context-Free Grammar (CFG). It starts from the start symbol (root) and expands using grammar rules until it reaches the terminals (leaves). \n\n\u2714 Key Properties: \n\u2022 Root node \u2192 Start symbol  \n\u2022 Internal nodes \u2192 Non-terminals  \n\u2022 Leaf nodes \u2192 Terminals (actual tokens)  \n\u2022 Shows step-by-step derivation of a string",
+    "trust": {
+      "trust": "low",
+      "reason": "The answer is faithful to the retrieved evidence, which was low confidence.",
+      "evidence_level": "low",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test2.pdf",
+        "page": 4,
+        "chunk_id": "test2.pdf_page4_chunk14",
+        "snippet": "1. Parse Tree (Syntax Tree) \nA Parse Tree is a tree-like structure that shows how a string is generated using the production rules of a Context-\nFree..."
+      }
+    ],
+    "file_a": null,
+    "file_b": null,
+    "confidence_a": null,
+    "confidence_b": null
+  },
+  {
+    "timestamp": "2026-06-27T19:10:40.010393",
+    "query": "hloo",
+    "intent": "qa",
+    "answer": "The compiler performs the final step of generating executable code for a specific machine after resolving syntax and semantic errors, generating intermediate code, and optimizing the code.",
+    "trust": {
+      "trust": "low",
+      "reason": "The answer is faithful to the retrieved evidence, which was low confidence.",
+      "evidence_level": "low",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test.pdf",
+        "page": 10,
+        "chunk_id": "test.pdf_page10_chunk26",
+        "snippet": "of a program is translated into target machine code. This phase transforms the program into a form that can be \nexecuted directly by the hardware...."
+      },
+      {
+        "ref": 2,
+        "filename": "unit4.pdf",
+        "page": 10,
+        "chunk_id": "unit4.pdf_page10_chunk26",
+        "snippet": "of a program is translated into target machine code. This phase transforms the program into a form that can be \nexecuted directly by the hardware...."
+      }
+    ],
+    "file_a": null,
+    "file_b": null,
+    "confidence_a": null,
+    "confidence_b": null
+  }
+]
