@@ -1,0 +1,506 @@
+[
+  {
+    "id": "bq_001",
+    "question": "What are the advantages of using LR parsers over other types of parsers?",
+    "expected_answer": "They can handle left recursion directly, work with a larger class of grammars, do not require grammar transformation, and detect errors more accurately.",
+    "expected_chunk_id": "test2.pdf_page18_chunk52",
+    "expected_source": "data/uploaded_docs/test2.pdf",
+    "expected_filename": "test2.pdf",
+    "expected_page": 18
+  },
+  {
+    "id": "bq_002",
+    "question": "What is mapped to a d-dimensional feature vector ø(x,y) in the global linear model framework?",
+    "expected_answer": "Each xƐx and yƐy",
+    "expected_chunk_id": "NLP_Notes.pdf_page32_chunk32",
+    "expected_source": "data/uploaded_docs/NLP_Notes.pdf",
+    "expected_filename": "NLP_Notes.pdf",
+    "expected_page": 32
+  },
+  {
+    "id": "bq_003",
+    "question": "What types of code does dead code elimination remove?",
+    "expected_answer": "Code that is never executed and code whose result is never used",
+    "expected_chunk_id": "test.pdf_page8_chunk21",
+    "expected_source": "data/uploaded_docs/test.pdf",
+    "expected_filename": "test.pdf",
+    "expected_page": 8
+  },
+  {
+    "id": "bq_004",
+    "question": "What characteristics must target machine code have in order to effectively determine the performance of a program?",
+    "expected_answer": "It must be efficient and correct",
+    "expected_chunk_id": "test.pdf_page18_chunk46",
+    "expected_source": "data/uploaded_docs/test.pdf",
+    "expected_filename": "test.pdf",
+    "expected_page": 18
+  },
+  {
+    "id": "bq_005",
+    "question": "What is the relationship between the retrieval and generation components in a RAG system?",
+    "expected_answer": "There is no answerable information in the provided text chunk.",
+    "expected_chunk_id": "nlp_assignment3.pdf_page1_chunk0",
+    "expected_source": "data/uploaded_docs/nlp_assignment3.pdf",
+    "expected_filename": "nlp_assignment3.pdf",
+    "expected_page": 1
+  },
+  {
+    "id": "bq_006",
+    "question": "What is the purpose of moving computations outside a loop in code motion optimization?",
+    "expected_answer": "To avoid repeated computation and improve loop efficiency",
+    "expected_chunk_id": "unit4.pdf_page9_chunk23",
+    "expected_source": "data\\uploaded_docs\\unit4.pdf",
+    "expected_filename": "unit4.pdf",
+    "expected_page": 9
+  },
+  {
+    "id": "bq_007",
+    "question": "What are some common technologies used in local area networks?",
+    "expected_answer": "Ethernet, Token Ring, and FDDI- Fiber Distributed Data Interface",
+    "expected_chunk_id": "cn_notes.pdf_page9_chunk9",
+    "expected_source": "data/uploaded_docs/cn_notes.pdf",
+    "expected_filename": "cn_notes.pdf",
+    "expected_page": 9
+  },
+  {
+    "id": "bq_008",
+    "question": "How do compilers handle situations where not all variables can be stored in registers simultaneously?",
+    "expected_answer": "Compilers must decide which values stay in registers and which values are moved to memory, and they can use efficient register allocation algorithms to reuse registers whenever possible.",
+    "expected_chunk_id": "test.pdf_page13_chunk33",
+    "expected_source": "data/uploaded_docs/test.pdf",
+    "expected_filename": "test.pdf",
+    "expected_page": 13
+  },
+  {
+    "id": "bq_009",
+    "question": "What are the steps involved in the fetch-decode-execute cycle of a CPU executing target machine code?",
+    "expected_answer": "The steps involved are: 1. Fetch instruction from memory, 2. Decode the instruction, and 3. Execute the operation.",
+    "expected_chunk_id": "test.pdf_page18_chunk45",
+    "expected_source": "data/uploaded_docs/test.pdf",
+    "expected_filename": "test.pdf",
+    "expected_page": 18
+  },
+  {
+    "id": "bq_010",
+    "question": "What do flow graphs help the compiler to understand and optimize in a program?",
+    "expected_answer": "program structure, detect loops and branches, and apply optimizations efficiently",
+    "expected_chunk_id": "test.pdf_page6_chunk15",
+    "expected_source": "data/uploaded_docs/test.pdf",
+    "expected_filename": "test.pdf",
+    "expected_page": 6
+  },
+  {
+    "id": "bq_011",
+    "question": "What are the components that make up a phrase structure grammar G?",
+    "expected_answer": "T, N, S, and P, which represent the set of terminals, set of nonterminals, start symbol, and production rules, respectively.",
+    "expected_chunk_id": "NLP_Notes.pdf_page8_chunk8",
+    "expected_source": "data/uploaded_docs/NLP_Notes.pdf",
+    "expected_filename": "NLP_Notes.pdf",
+    "expected_page": 8
+  },
+  {
+    "id": "bq_012",
+    "question": "What order does the parser expand non-terminals in a parse tree?",
+    "expected_answer": "The parser always expands the leftmost non-terminal first",
+    "expected_chunk_id": "test2.pdf_page10_chunk26",
+    "expected_source": "data/uploaded_docs/test2.pdf",
+    "expected_filename": "test2.pdf",
+    "expected_page": 10
+  },
+  {
+    "id": "bq_013",
+    "question": "What are some of the key constraints that compilers face during the Code Generation phase?",
+    "expected_answer": "practical constraints, such as a limited number of registers, and the need to generate correct, fast, and resource-efficient code",
+    "expected_chunk_id": "test.pdf_page13_chunk32",
+    "expected_source": "data/uploaded_docs/test.pdf",
+    "expected_filename": "test.pdf",
+    "expected_page": 13
+  },
+  {
+    "id": "bq_014",
+    "question": "What corrections can a parser make during phrase-level recovery?",
+    "expected_answer": "Inserting missing tokens, deleting extra tokens, and replacing incorrect tokens",
+    "expected_chunk_id": "test2.pdf_page20_chunk60",
+    "expected_source": "data/uploaded_docs/test2.pdf",
+    "expected_filename": "test2.pdf",
+    "expected_page": 20
+  },
+  {
+    "id": "bq_015",
+    "question": "How were classrooms typically cabled for different types of communication 30 years ago?",
+    "expected_answer": "Classrooms were cabled separately for data networks, telephone networks, and video, each using different technologies, rules, and standards.",
+    "expected_chunk_id": "cn_notes.pdf_page16_chunk20",
+    "expected_source": "data/uploaded_docs/cn_notes.pdf",
+    "expected_filename": "cn_notes.pdf",
+    "expected_page": 16
+  },
+  {
+    "id": "bq_016",
+    "question": "What methods are used to transform intermediate code into a more efficient form during code optimization?",
+    "expected_answer": "Reducing unnecessary computations, minimizing memory usage, and improving execution speed",
+    "expected_chunk_id": "unit4.pdf_page1_chunk2",
+    "expected_source": "data\\uploaded_docs\\unit4.pdf",
+    "expected_filename": "unit4.pdf",
+    "expected_page": 1
+  },
+  {
+    "id": "bq_017",
+    "question": "What are the different types of components in a grammar and what do they represent?",
+    "expected_answer": "Terminals, which are actual symbols, and non-terminals, which are variables representing structure.",
+    "expected_chunk_id": "test2.pdf_page4_chunk12",
+    "expected_source": "data/uploaded_docs/test2.pdf",
+    "expected_filename": "test2.pdf",
+    "expected_page": 4
+  },
+  {
+    "id": "bq_018",
+    "question": "What are the key areas where code optimization aims to improve the efficiency of intermediate code?",
+    "expected_answer": "execution time, memory usage, or resource utilization",
+    "expected_chunk_id": "test.pdf_page1_chunk1",
+    "expected_source": "data/uploaded_docs/test.pdf",
+    "expected_filename": "test.pdf",
+    "expected_page": 1
+  },
+  {
+    "id": "bq_019",
+    "question": "How does strength reduction improve the execution of code?",
+    "expected_answer": "Strength reduction improves the execution of code by replacing expensive operations, such as multiplication, with cheaper ones, like addition or bit shift, resulting in faster execution and more efficient CPU usage.",
+    "expected_chunk_id": "test.pdf_page9_chunk22",
+    "expected_source": "data/uploaded_docs/test.pdf",
+    "expected_filename": "test.pdf",
+    "expected_page": 9
+  },
+  {
+    "id": "bq_020",
+    "question": "What is an example of an unnecessary computation that can be removed through optimization?",
+    "expected_answer": "Adding 0 to a value, such as in the instruction x = a + 0, which can be optimized to x = a",
+    "expected_chunk_id": "unit4.pdf_page1_chunk3",
+    "expected_source": "data\\uploaded_docs\\unit4.pdf",
+    "expected_filename": "unit4.pdf",
+    "expected_page": 1
+  },
+  {
+    "id": "bq_021",
+    "question": "What characteristics describe the instructions produced by a compiler for a particular processor architecture?",
+    "expected_answer": "They are hardware-dependent, low-level, and directly executed by the CPU.",
+    "expected_chunk_id": "unit4.pdf_page16_chunk42",
+    "expected_source": "data\\uploaded_docs\\unit4.pdf",
+    "expected_filename": "unit4.pdf",
+    "expected_page": 16
+  },
+  {
+    "id": "bq_022",
+    "question": "What happens to the value of t1 when both R1 and R2 are occupied and the compiler needs to free up a register?",
+    "expected_answer": "The compiler stores (spills) the value of t1 to memory.",
+    "expected_chunk_id": "unit4.pdf_page15_chunk40",
+    "expected_source": "data\\uploaded_docs\\unit4.pdf",
+    "expected_filename": "unit4.pdf",
+    "expected_page": 15
+  },
+  {
+    "id": "bq_023",
+    "question": "How is the parse tree constructed in a bottom-up parsing approach",
+    "expected_answer": "from leaves to root, starting with leaf nodes and using Reduce operations to combine them until reaching the start symbol",
+    "expected_chunk_id": "test2.pdf_page19_chunk54",
+    "expected_source": "data/uploaded_docs/test2.pdf",
+    "expected_filename": "test2.pdf",
+    "expected_page": 19
+  },
+  {
+    "id": "bq_024",
+    "question": "What characterizes a single basic block in intermediate code?",
+    "expected_answer": "No jumps, no labels, and continuous execution",
+    "expected_chunk_id": "unit4.pdf_page5_chunk14",
+    "expected_source": "data\\uploaded_docs\\unit4.pdf",
+    "expected_filename": "unit4.pdf",
+    "expected_page": 5
+  },
+  {
+    "id": "bq_025",
+    "question": "How can we determine if a group of words is a constituent in phrase structure?",
+    "expected_answer": "by checking if it behaves as a unit that can appear in different places, and if it can be substituted, expanded, or replaced with pro-forms",
+    "expected_chunk_id": "NLP_Notes.pdf_page6_chunk5",
+    "expected_source": "data/uploaded_docs/NLP_Notes.pdf",
+    "expected_filename": "NLP_Notes.pdf",
+    "expected_page": 6
+  },
+  {
+    "id": "bq_026",
+    "question": "What production rules are applied to parse the input id + id in an LL(1) parsing process?",
+    "expected_answer": "The production rules applied are E → T E', T → id, E' → + T E', and E' → ε.",
+    "expected_chunk_id": "test2.pdf_page13_chunk39",
+    "expected_source": "data/uploaded_docs/test2.pdf",
+    "expected_filename": "test2.pdf",
+    "expected_page": 13
+  },
+  {
+    "id": "bq_027",
+    "question": "What are the possible attachments for the prepositional phrase 'with a telescope' in the sentence 'I saw the man with a telescope'?",
+    "expected_answer": "The verb 'saw' or the noun 'man'",
+    "expected_chunk_id": "NLP_Notes.pdf_page13_chunk13",
+    "expected_source": "data/uploaded_docs/NLP_Notes.pdf",
+    "expected_filename": "NLP_Notes.pdf",
+    "expected_page": 13
+  },
+  {
+    "id": "bq_028",
+    "question": "What is involved in learning dependency structure for a given sentence?",
+    "expected_answer": "scoring possible dependency graphs for a given sentence, usually by factoring the graphs into their component arcs",
+    "expected_chunk_id": "NLP_Notes.pdf_page7_chunk7",
+    "expected_source": "data/uploaded_docs/NLP_Notes.pdf",
+    "expected_filename": "NLP_Notes.pdf",
+    "expected_page": 7
+  },
+  {
+    "id": "bq_029",
+    "question": "What information does the symbol table provide to help the compiler map variables to memory or registers?",
+    "expected_answer": "Variable names, data types, memory locations, and scope information",
+    "expected_chunk_id": "unit4.pdf_page11_chunk27",
+    "expected_source": "data\\uploaded_docs\\unit4.pdf",
+    "expected_filename": "unit4.pdf",
+    "expected_page": 11
+  },
+  {
+    "id": "bq_030",
+    "question": "What are the main components that make up the Internet?",
+    "expected_answer": "A community of people and a collection of resources",
+    "expected_chunk_id": "cn_notes.pdf_page14_chunk17",
+    "expected_source": "data/uploaded_docs/cn_notes.pdf",
+    "expected_filename": "cn_notes.pdf",
+    "expected_page": 14
+  },
+  {
+    "id": "bq_031",
+    "question": "What are the key decisions the compiler makes regarding memory?",
+    "expected_answer": "The compiler determines where variables are stored and how memory is accessed.",
+    "expected_chunk_id": "unit4.pdf_page3_chunk10",
+    "expected_source": "data\\uploaded_docs\\unit4.pdf",
+    "expected_filename": "unit4.pdf",
+    "expected_page": 3
+  },
+  {
+    "id": "bq_032",
+    "question": "What is the working principle of bottom-up parsing in terms of the derivation process?",
+    "expected_answer": "It tries to reverse the derivation process, attempting to reduce the input string back to the start symbol using grammar rules, following a Rightmost Derivation in Reverse.",
+    "expected_chunk_id": "test2.pdf_page17_chunk48",
+    "expected_source": "data/uploaded_docs/test2.pdf",
+    "expected_filename": "test2.pdf",
+    "expected_page": 17
+  },
+  {
+    "id": "bq_033",
+    "question": "What is the primary function of WANs in relation to LANs?",
+    "expected_answer": "WANs interconnect LANs, which then provide access to computers or file servers in other locations.",
+    "expected_chunk_id": "cn_notes.pdf_page11_chunk12",
+    "expected_source": "data/uploaded_docs/cn_notes.pdf",
+    "expected_filename": "cn_notes.pdf",
+    "expected_page": 11
+  },
+  {
+    "id": "bq_034",
+    "question": "What types of services can converged data networks carry on one link?",
+    "expected_answer": "data, voice, and video",
+    "expected_chunk_id": "cn_notes.pdf_page17_chunk21",
+    "expected_source": "data/uploaded_docs/cn_notes.pdf",
+    "expected_filename": "cn_notes.pdf",
+    "expected_page": 17
+  },
+  {
+    "id": "bq_035",
+    "question": "What is the role of the conditioning context in the probability P(di|d1,……..,di-1) in generative models?",
+    "expected_answer": "The conditioning context is called the history and corresponds to a partially built parse tree.",
+    "expected_chunk_id": "NLP_Notes.pdf_page31_chunk31",
+    "expected_source": "data/uploaded_docs/NLP_Notes.pdf",
+    "expected_filename": "NLP_Notes.pdf",
+    "expected_page": 31
+  },
+  {
+    "id": "bq_036",
+    "question": "What happens after the function T() matches the first token id from the input?",
+    "expected_answer": "The function E'() is called, and since the next input symbol is +, it follows the rule E' → + T E', matches +, and calls T()",
+    "expected_chunk_id": "test2.pdf_page11_chunk32",
+    "expected_source": "data/uploaded_docs/test2.pdf",
+    "expected_filename": "test2.pdf",
+    "expected_page": 11
+  },
+  {
+    "id": "bq_037",
+    "question": "What kind of areas do Metropolitan Area Networks typically span and connect",
+    "expected_answer": "a metropolitan area, such as a city or a large campus, connecting multiple LANs",
+    "expected_chunk_id": "cn_notes.pdf_page10_chunk10",
+    "expected_source": "data/uploaded_docs/cn_notes.pdf",
+    "expected_filename": "cn_notes.pdf",
+    "expected_page": 10
+  },
+  {
+    "id": "bq_038",
+    "question": "What are the key decisions the compiler makes regarding memory?",
+    "expected_answer": "The compiler determines where variables are stored and how memory is accessed.",
+    "expected_chunk_id": "test.pdf_page3_chunk10",
+    "expected_source": "data/uploaded_docs/test.pdf",
+    "expected_filename": "test.pdf",
+    "expected_page": 3
+  },
+  {
+    "id": "bq_039",
+    "question": "How do function calls build the tree structure in the parsing process?",
+    "expected_answer": "They build the tree structure implicitly as they call each other recursively.",
+    "expected_chunk_id": "test2.pdf_page12_chunk35",
+    "expected_source": "data/uploaded_docs/test2.pdf",
+    "expected_filename": "test2.pdf",
+    "expected_page": 12
+  },
+  {
+    "id": "bq_040",
+    "question": "What services do WANs provide to users?",
+    "expected_answer": "e-mail, Internet, file transfer, and e-commerce services",
+    "expected_chunk_id": "cn_notes.pdf_page12_chunk14",
+    "expected_source": "data/uploaded_docs/cn_notes.pdf",
+    "expected_filename": "cn_notes.pdf",
+    "expected_page": 12
+  },
+  {
+    "id": "bq_041",
+    "question": "What characteristics describe the instructions produced by a compiler for a particular processor architecture?",
+    "expected_answer": "They are hardware-dependent, low-level, and directly executed by the CPU.",
+    "expected_chunk_id": "test.pdf_page16_chunk42",
+    "expected_source": "data/uploaded_docs/test.pdf",
+    "expected_filename": "test.pdf",
+    "expected_page": 16
+  },
+  {
+    "id": "bq_042",
+    "question": "What has been the outcome of statistical parsing over the last 12 years?",
+    "expected_answer": "It has succeeded wonderfully",
+    "expected_chunk_id": "NLP_Notes.pdf_page3_chunk2",
+    "expected_source": "data/uploaded_docs/NLP_Notes.pdf",
+    "expected_filename": "NLP_Notes.pdf",
+    "expected_page": 3
+  },
+  {
+    "id": "bq_043",
+    "question": "How can parsing be approached in terms of examining structures for a string of words?",
+    "expected_answer": "Parsing can be approached either bottom-up or top-down.",
+    "expected_chunk_id": "NLP_Notes.pdf_page14_chunk14",
+    "expected_source": "data/uploaded_docs/NLP_Notes.pdf",
+    "expected_filename": "NLP_Notes.pdf",
+    "expected_page": 14
+  },
+  {
+    "id": "bq_044",
+    "question": "What are the two main goals of the Code Optimization and Code Generation stages in a compiler?",
+    "expected_answer": "To make the program efficient and to convert it into machine-executable code",
+    "expected_chunk_id": "unit4.pdf_page1_chunk0",
+    "expected_source": "data\\uploaded_docs\\unit4.pdf",
+    "expected_filename": "unit4.pdf",
+    "expected_page": 1
+  },
+  {
+    "id": "bq_045",
+    "question": "What is the primary responsibility of the Syntax Analysis phase in the compilation process?",
+    "expected_answer": "to verify whether the tokens are arranged in a meaningful and grammatically correct structure",
+    "expected_chunk_id": "test2.pdf_page1_chunk0",
+    "expected_source": "data/uploaded_docs/test2.pdf",
+    "expected_filename": "test2.pdf",
+    "expected_page": 1
+  },
+  {
+    "id": "bq_046",
+    "question": "What are some applications of statistical parsing in natural language processing?",
+    "expected_answer": "High precision question answering systems, improving biological named entity extraction, syntactically based sentence compression, extracting people’s opinions about products, improved interaction in computer games, and helping linguists find data",
+    "expected_chunk_id": "NLP_Notes.pdf_page4_chunk3",
+    "expected_source": "data/uploaded_docs/NLP_Notes.pdf",
+    "expected_filename": "NLP_Notes.pdf",
+    "expected_page": 4
+  },
+  {
+    "id": "bq_047",
+    "question": "What types of devices can act as nodes in a computer network?",
+    "expected_answer": "computers and network devices, such as switches and routers",
+    "expected_chunk_id": "cn_notes.pdf_page3_chunk2",
+    "expected_source": "data/uploaded_docs/cn_notes.pdf",
+    "expected_filename": "cn_notes.pdf",
+    "expected_page": 3
+  },
+  {
+    "id": "bq_048",
+    "question": "What issues does ambiguity cause in compilers?",
+    "expected_answer": "Ambiguity makes it difficult for the compiler to decide the correct evaluation, leads to inconsistent results, makes program behavior unpredictable, and is difficult to implement parsing algorithms",
+    "expected_chunk_id": "test2.pdf_page6_chunk17",
+    "expected_source": "data/uploaded_docs/test2.pdf",
+    "expected_filename": "test2.pdf",
+    "expected_page": 6
+  },
+  {
+    "id": "bq_049",
+    "question": "What factors should a compiler consider when selecting optimal instructions?",
+    "expected_answer": "Speed, power consumption, and hardware capabilities",
+    "expected_chunk_id": "unit4.pdf_page13_chunk34",
+    "expected_source": "data\\uploaded_docs\\unit4.pdf",
+    "expected_filename": "unit4.pdf",
+    "expected_page": 13
+  },
+  {
+    "id": "bq_050",
+    "question": "What types of locations can a LAN be installed in?",
+    "expected_answer": "a home, small office, or multiple buildings and locations",
+    "expected_chunk_id": "cn_notes.pdf_page8_chunk7",
+    "expected_source": "data/uploaded_docs/cn_notes.pdf",
+    "expected_filename": "cn_notes.pdf",
+    "expected_page": 8
+  },
+  {
+    "id": "bq_051",
+    "question": "How is the output parse tree defined for a given input sentence?",
+    "expected_answer": "by the sequence of steps in the derivation",
+    "expected_chunk_id": "NLP_Notes.pdf_page30_chunk30",
+    "expected_source": "data/uploaded_docs/NLP_Notes.pdf",
+    "expected_filename": "NLP_Notes.pdf",
+    "expected_page": 30
+  },
+  {
+    "id": "bq_052",
+    "question": "What are the key areas of focus for studying networking fundamentals in this course?",
+    "expected_answer": "The fundamentals of networking, Physical and Data link layer functionalities, Network Layer functionalities, protocols at Transport and Application Layer, routing and routing configuration, and techniques such as VLAN, ACL, and NAT",
+    "expected_chunk_id": "cn_notes.pdf_page2_chunk1",
+    "expected_source": "data/uploaded_docs/cn_notes.pdf",
+    "expected_filename": "cn_notes.pdf",
+    "expected_page": 2
+  },
+  {
+    "id": "bq_053",
+    "question": "How does strength reduction improve the execution of a program?",
+    "expected_answer": "It replaces expensive operations, such as multiplication, with cheaper ones, like addition or bit shift, resulting in faster execution and more efficient CPU usage.",
+    "expected_chunk_id": "unit4.pdf_page9_chunk22",
+    "expected_source": "data\\uploaded_docs\\unit4.pdf",
+    "expected_filename": "unit4.pdf",
+    "expected_page": 9
+  },
+  {
+    "id": "bq_054",
+    "question": "What are the main goals of code generation in the compilation process?",
+    "expected_answer": "To generate correct machine code and ensure efficient use of resources, such as CPU and memory.",
+    "expected_chunk_id": "test.pdf_page3_chunk8",
+    "expected_source": "data/uploaded_docs/test.pdf",
+    "expected_filename": "test.pdf",
+    "expected_page": 3
+  },
+  {
+    "id": "bq_055",
+    "question": "What are some advantages of using a computer network?",
+    "expected_answer": "Better communication, better connectivity, better sharing of resources, and bringing people together",
+    "expected_chunk_id": "cn_notes.pdf_page4_chunk3",
+    "expected_source": "data/uploaded_docs/cn_notes.pdf",
+    "expected_filename": "cn_notes.pdf",
+    "expected_page": 4
+  },
+  {
+    "id": "bq_056",
+    "question": "What happens during a reduce action in Shift Reduce Parsing?",
+    "expected_answer": "We pop the rule's RHS off the stack and replace it with the terminal on the LHS of the corresponding rule.",
+    "expected_chunk_id": "NLP_Notes.pdf_page18_chunk17",
+    "expected_source": "data/uploaded_docs/NLP_Notes.pdf",
+    "expected_filename": "NLP_Notes.pdf",
+    "expected_page": 18
+  }
+]
