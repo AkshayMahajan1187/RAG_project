@@ -97,7 +97,7 @@ Rather than assuming the architecture choices (hybrid search, reranking) actuall
 
 ---
 
-## Engineering Notes (real constraints hit and how they were handled)
+## Engineering Notes
 
 - **Groq free-tier daily token limit (100k tokens/day on the 70b judge model):** running the full evaluation (56 questions × 4 pipeline variants × 2 LLM-judge calls each) exceeded the daily quota partway through the first full run, breaking faithfulness results for the last-tested variant. Diagnosed from the actual API error rather than guessing, then fixed two ways: moved the simpler accuracy-grading task to a smaller model to reduce load on the daily-limited model, and added the ability to re-run a single pipeline variant in isolation — so the affected variant was re-measured the next day without repeating the full comparison.
 - **Corrupted / image-only PDFs:** discovered that PDF corruption can be introduced by opening binary files directly in a text-oriented editor; also found that some "text-looking" PDFs are actually rendered as flattened images with no extractable text layer at all (confirmed via character-count checks, not assumption).
@@ -114,7 +114,7 @@ Rather than assuming the architecture choices (hybrid search, reranking) actuall
 
 ---
 
-## Running Locally (optional — for exploring the code)
+## Running Locally
 
 The live demo above is the easiest way to try this. If you want to run it yourself or read through the code locally:
 
