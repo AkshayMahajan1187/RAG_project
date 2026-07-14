@@ -1,0 +1,61 @@
+[
+  {
+    "timestamp": "2026-07-13T00:54:54.712307",
+    "query": "what is dead code elimination",
+    "intent": "qa",
+    "answer": "Dead code elimination removes code that is never executed or whose result is never used.",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test.pdf",
+        "page": 8,
+        "chunk_id": "test.pdf_page8_chunk21",
+        "snippet": "2. Dead Code Elimination \nDefinition \nDead code elimination removes: \n\u2022 \nCode that is never executed  \n\u2022 \nCode whose result is never used  \n \nExample..."
+      },
+      {
+        "ref": 2,
+        "filename": "unit4.pdf",
+        "page": 8,
+        "chunk_id": "unit4.pdf_page8_chunk21",
+        "snippet": "2. Dead Code Elimination \nDefinition \nDead code elimination removes: \n\u2022 \nCode that is never executed  \n\u2022 \nCode whose result is never used  \n \nExample..."
+      }
+    ],
+    "file_a": null,
+    "file_b": null,
+    "confidence_a": null,
+    "confidence_b": null
+  },
+  {
+    "timestamp": "2026-07-13T00:59:28.503410",
+    "query": "what is parser tree",
+    "intent": "qa",
+    "answer": "Parse Tree (Syntax Tree)",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test2.pdf",
+        "page": 4,
+        "chunk_id": "test2.pdf_page4_chunk14",
+        "snippet": "1. Parse Tree (Syntax Tree) \nA Parse Tree is a tree-like structure that shows how a string is generated using the production rules of a Context-\nFree..."
+      }
+    ],
+    "file_a": null,
+    "file_b": null,
+    "confidence_a": null,
+    "confidence_b": null
+  }
+]

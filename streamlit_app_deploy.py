@@ -137,9 +137,12 @@ for msg in st.session_state.messages:
         if msg["role"] == "assistant" and msg.get("intent") != "smalltalk":
             if msg.get("trust"):
                 render_trust_badge(msg["trust"])
+            
+            if msg.get("query_reformulated"):
+                st.info(f" Query reformulated for better retrieval: *\"{msg.get('reformulated_query')}\"*")
 
             if msg.get("citations"):
-                with st.expander("📚 Citations"):
+                with st.expander(" Citations"):
                     for c in msg["citations"]:
                         st.markdown(f"**[{c['ref']}]** {c['filename']} — page {c['page']}")
                         st.caption(c['snippet'])
@@ -170,6 +173,8 @@ if user_input:
         "intent": result.get("intent"),
         "trust": result.get("trust"),
         "citations": result.get("citations"),
+        "query_reformulated": result.get("query_reformulated"),
+        "reformulated_query": result.get("reformulated_query"),
     })
 
     st.rerun()

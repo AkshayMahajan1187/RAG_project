@@ -1,0 +1,161 @@
+[
+  {
+    "timestamp": "2026-07-12T21:40:56.358339",
+    "query": "why does the loop optimization thing sometimes not work properly",
+    "intent": "qa",
+    "answer": "Loop optimization is a technique used to improve the performance of loops by reducing the number of computations and improving the efficiency of the loop.",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test.pdf",
+        "page": 9,
+        "chunk_id": "test.pdf_page9_chunk23",
+        "snippet": "\u2022 \nEfficient CPU usage  \n \n4. Loop Optimization \nLoops are executed multiple times, so optimizing them gives significant performance improvement...."
+      },
+      {
+        "ref": 2,
+        "filename": "unit4.pdf",
+        "page": 9,
+        "chunk_id": "unit4.pdf_page9_chunk23",
+        "snippet": "\u2022 \nEfficient CPU usage  \n \n4. Loop Optimization \nLoops are executed multiple times, so optimizing them gives significant performance improvement...."
+      }
+    ],
+    "file_a": null,
+    "file_b": null,
+    "confidence_a": null,
+    "confidence_b": null
+  },
+  {
+    "timestamp": "2026-07-12T21:42:46.370093",
+    "query": "what's that trick where you take stuff outside the loop so it doesn't repeat calculations",
+    "intent": "qa",
+    "answer": "Loop optimization techniques include:\n\n1. Code Motion \n   - Definition: Move computations outside the loop if they produce the same result every iteration.\n   - Benefit: \n     \u2022 Avoids repeated computation\n     \u2022 Improves loop efficiency\n\n2. Induction Variable Elimination \n   - Definition: Simplifies variables that change predictably in a loop\n   - Explanation: \n     \u2022 Eliminates multiplication inside loop\n     \u2022 Uses addition instead (faster)",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test.pdf",
+        "page": 9,
+        "chunk_id": "test.pdf_page9_chunk23",
+        "snippet": "\u2022 \nEfficient CPU usage  \n \n4. Loop Optimization \nLoops are executed multiple times, so optimizing them gives significant performance improvement...."
+      },
+      {
+        "ref": 2,
+        "filename": "unit4.pdf",
+        "page": 9,
+        "chunk_id": "unit4.pdf_page9_chunk23",
+        "snippet": "\u2022 \nEfficient CPU usage  \n \n4. Loop Optimization \nLoops are executed multiple times, so optimizing them gives significant performance improvement...."
+      },
+      {
+        "ref": 3,
+        "filename": "test.pdf",
+        "page": 10,
+        "chunk_id": "test.pdf_page10_chunk24",
+        "snippet": "(b) Induction Variable Elimination \n\u2714 Definition \nSimplifies variables that change predictably in a loop \n \n\u2714 Example \nBefore: \nfor (i = 0; i < n; i++..."
+      }
+    ],
+    "file_a": null,
+    "file_b": null,
+    "confidence_a": null,
+    "confidence_b": null
+  },
+  {
+    "timestamp": "2026-07-12T21:44:36.145049",
+    "query": "tell me about the wave particle box thing",
+    "intent": "qa",
+    "answer": "I'm not able to find any information about \"wave particle box\" in the provided context.",
+    "trust": {
+      "trust": "low",
+      "reason": "The answer includes details not clearly supported by the retrieved evidence, regardless of how strong that evidence was.",
+      "evidence_level": "low",
+      "grounded": false
+    },
+    "grounded": false,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "NLP_Notes.pdf",
+        "page": 6,
+        "chunk_id": "NLP_Notes.pdf_page6_chunk6",
+        "snippet": "\u2022 I sat [on the box/right on top of the box/there].\n\u2022 Coordination, regular internal structure, no \nintrusion, fragments, semantics, \u2026..."
+      },
+      {
+        "ref": 2,
+        "filename": "cn_notes.pdf",
+        "page": 13,
+        "chunk_id": "cn_notes.pdf_page13_chunk16",
+        "snippet": "CN- Unit-I..."
+      },
+      {
+        "ref": 3,
+        "filename": "cn_notes.pdf",
+        "page": 12,
+        "chunk_id": "cn_notes.pdf_page12_chunk15",
+        "snippet": "\u2751\nFrame Relay\n\u2751\nT1, E1, T3, and E3\n\u2751\nSynchronous Optical Network (SONET)\nCN- Unit-I..."
+      }
+    ],
+    "file_a": null,
+    "file_b": null,
+    "confidence_a": null,
+    "confidence_b": null
+  },
+  {
+    "timestamp": "2026-07-12T21:58:50.202384",
+    "query": "compare parsing tree from both document",
+    "intent": "compare",
+    "answer": "Document A does not contain sufficient information on this topic to compare (confidence: low).",
+    "trust": null,
+    "grounded": null,
+    "citations": null,
+    "file_a": "test.pdf",
+    "file_b": "test2.pdf",
+    "confidence_a": {
+      "score": 0.09,
+      "level": "low",
+      "top_rerank_score": -11.31,
+      "avg_rerank_score": -11.36
+    },
+    "confidence_b": {
+      "score": 0.55,
+      "level": "medium",
+      "top_rerank_score": 1.02,
+      "avg_rerank_score": 0.46
+    }
+  },
+  {
+    "timestamp": "2026-07-12T22:05:19.993772",
+    "query": "compare code optimization ",
+    "intent": "compare",
+    "answer": "Document B does not contain sufficient information on this topic to compare (confidence: low).",
+    "trust": null,
+    "grounded": null,
+    "citations": null,
+    "file_a": "test.pdf",
+    "file_b": "test2.pdf",
+    "confidence_a": {
+      "score": 0.89,
+      "level": "high",
+      "top_rerank_score": 10.5,
+      "avg_rerank_score": 9.45
+    },
+    "confidence_b": {
+      "score": 0.32,
+      "level": "low",
+      "top_rerank_score": -3.83,
+      "avg_rerank_score": -4.0
+    }
+  }
+]

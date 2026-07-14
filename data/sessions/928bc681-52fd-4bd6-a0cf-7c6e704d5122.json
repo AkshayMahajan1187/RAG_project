@@ -1,0 +1,61 @@
+[
+  {
+    "timestamp": "2026-07-12T20:59:29.560880",
+    "query": "tell me about the box thing with the particle",
+    "intent": "qa",
+    "answer": "I sat on the box/right on top of the box/there.",
+    "trust": {
+      "trust": "low",
+      "reason": "The answer is faithful to the retrieved evidence, which was low confidence.",
+      "evidence_level": "low",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "NLP_Notes.pdf",
+        "page": 6,
+        "chunk_id": "NLP_Notes.pdf_page6_chunk6",
+        "snippet": "\u2022 I sat [on the box/right on top of the box/there].\n\u2022 Coordination, regular internal structure, no \nintrusion, fragments, semantics, \u2026..."
+      }
+    ],
+    "file_a": null,
+    "file_b": null,
+    "confidence_a": null,
+    "confidence_b": null
+  },
+  {
+    "timestamp": "2026-07-12T21:00:49.559395",
+    "query": "what's parsing efficiency",
+    "intent": "qa",
+    "answer": "LL(1) parsing is efficient because: \n\u2714 No backtracking is required  \n\u2714 Only one lookahead symbol is enough  \n\u2714 Uses precomputed parsing table  \n\u2714 Time complexity is linear (O(n))",
+    "trust": {
+      "trust": "medium",
+      "reason": "The answer is faithful to the retrieved evidence, which was medium confidence.",
+      "evidence_level": "medium",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 1,
+        "filename": "test2.pdf",
+        "page": 14,
+        "chunk_id": "test2.pdf_page14_chunk40",
+        "snippet": "Explanation of the Parse Tree \n\u2022 \nStart symbol E expands into T E'  \n\u2022 \nT produces id  \n\u2022 \nE' expands into + T E'  \n\u2022 \nSecond T produces id  \n\u2022 \nFinal..."
+      },
+      {
+        "ref": 3,
+        "filename": "NLP_Notes.pdf",
+        "page": 14,
+        "chunk_id": "NLP_Notes.pdf_page14_chunk14",
+        "snippet": "What is parsing?\n\u2022 We want to run a grammar backwards to find \npossible structures for a sentence\n\u2022 Parsing can be viewed as a search problem\n\u2022 Parsin..."
+      }
+    ],
+    "file_a": null,
+    "file_b": null,
+    "confidence_a": null,
+    "confidence_b": null
+  }
+]
