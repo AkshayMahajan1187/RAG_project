@@ -28,9 +28,6 @@ def get_user_id():
 st.set_page_config(page_title="AI Knowledge Assistant", page_icon="🧠", layout="wide")
 
 
-# --- One-time setup: just get the vector store handle, cached across reruns.
-# BM25 is NOT built here anymore — it has to be per-user, and there's no user
-# context yet at cache_resource time (this runs once for the whole process).
 @st.cache_resource
 def init_pipeline():
     return get_vector_store()
@@ -53,8 +50,6 @@ if "session_id" not in st.session_state:
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
-# Build this user's BM25 index once per browser session (not once per process).
-# Cheap enough to redo per session_state reset; avoids stale/missing index.
 if "bm25_built_for" not in st.session_state or st.session_state.bm25_built_for != st.session_state.user_id:
     build_bm25_index(get_all_chunks(vector_store, st.session_state.user_id), st.session_state.user_id)
     st.session_state.bm25_built_for = st.session_state.user_id
@@ -63,6 +58,25 @@ if "bm25_built_for" not in st.session_state or st.session_state.bm25_built_for !
 def new_chat():
     st.session_state.session_id = str(uuid.uuid4())
     st.session_state.messages = []
+
+
+def load_chat(session_id: str):
+    """Switch to a previously saved chat and rebuild the screen from its saved history."""
+    st.session_state.session_id = session_id
+    memory = SessionMemoryManager.get(session_id)
+    messages = []
+    for turn in memory.history:
+        messages.append({"role": "user", "content": turn["query"]})
+        messages.append({
+            "role": "assistant",
+            "content": turn.get("answer", ""),
+            "intent": turn.get("intent"),
+            "trust": turn.get("trust"),
+            "citations": turn.get("citations"),
+            "query_reformulated": False,
+            "reformulated_query": None,
+        })
+    st.session_state.messages = messages
 
 
 def get_documents():
@@ -109,6 +123,31 @@ with st.sidebar:
 
     st.divider()
 
+    # --- Chat history list ---
+    st.markdown("### 💬 Chats")
+    chats = SessionMemoryManager.list_chats(st.session_state.user_id)
+
+    def render_chat_button(chat):
+        label = chat["title"][:30] + ("..." if len(chat["title"]) > 30 else "")
+        is_current = chat["session_id"] == st.session_state.session_id
+        prefix = "🟢 " if is_current else ""
+        if st.button(prefix + label, key=f"chat_{chat['session_id']}", use_container_width=True):
+            load_chat(chat["session_id"])
+            st.rerun()
+
+    if chats:
+        recent, older = chats[:10], chats[10:]
+        for chat in recent:
+            render_chat_button(chat)
+        if older:
+            with st.expander(f"Show {len(older)} older chats"):
+                for chat in older:
+                    render_chat_button(chat)
+    else:
+        st.caption("No past chats yet.")
+
+    st.divider()
+
     st.markdown("### 📄 Documents")
     docs = get_documents()
     if docs:
@@ -129,7 +168,6 @@ with st.sidebar:
                     raw_docs = load_document(str(save_path))
                     chunks = chunk_documents(raw_docs)
 
-                    # tag every chunk with whose document this is
                     for c in chunks:
                         c.metadata["user_id"] = st.session_state.user_id
 
@@ -186,6 +224,7 @@ if user_input:
     st.session_state.messages.append({"role": "user", "content": user_input})
 
     memory = SessionMemoryManager.get(st.session_state.session_id)
+    is_first_turn = len(memory.history) == 0  # check BEFORE this turn gets added
 
     with st.spinner("Thinking..."):
         try:
@@ -199,6 +238,13 @@ if user_input:
             )
         except Exception as e:
             result = {"answer": f"Error: {e}", "intent": "qa"}
+
+    if is_first_turn:
+        SessionMemoryManager.register_chat(
+            st.session_state.user_id,
+            st.session_state.session_id,
+            title=user_input
+        )
 
     st.session_state.messages.append({
         "role": "assistant",
