@@ -7,6 +7,7 @@ pydantic==2.12.5
 # --- Frontend ---
 streamlit==1.48.1
 requests==2.33.1
+extra-streamlit-components==0.1.81
 
 # --- LLM ---
 groq==0.37.1
