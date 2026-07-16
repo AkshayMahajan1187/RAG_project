@@ -115,8 +115,6 @@ with st.sidebar:
     st.markdown("## 🧠 Knowledge Assistant")
     st.caption("Agentic RAG system")
 
-    st.sidebar.write(st.session_state.user_id)
-
     if st.button("➕ New Chat", use_container_width=True):
         new_chat()
         st.rerun()
