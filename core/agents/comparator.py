@@ -6,9 +6,9 @@ from core.utils.confidence import calculate_evidence_confidence
 from core.retrieval.hybrid_search import hybrid_search_scoped
 
 
-def compare_documents(query: str, file_a: str, file_b: str, vector_store: Chroma, k: int = 10) -> dict:
-    candidates_a = hybrid_search_scoped(vector_store, query, file_a, k=k)
-    candidates_b = hybrid_search_scoped(vector_store, query, file_b, k=k)
+def compare_documents(query: str, file_a: str, file_b: str, vector_store: Chroma, user_id: str, k: int = 10) -> dict:
+    candidates_a = hybrid_search_scoped(vector_store, query, file_a, user_id, k=k)
+    candidates_b = hybrid_search_scoped(vector_store, query, file_b, user_id, k=k)
 
     if not candidates_a or not candidates_b:
         missing = "Document A" if not candidates_a else "Document B"
@@ -18,15 +18,12 @@ def compare_documents(query: str, file_a: str, file_b: str, vector_store: Chroma
             "confidence_a": None, "confidence_b": None
         }
 
-    # rerank each document's candidates independently
     chunks_a = rerank(query, candidates_a)
     chunks_b = rerank(query, candidates_b)
 
-    # reuse the exact same evidence confidence scoring used in the QA path
     confidence_a = calculate_evidence_confidence(chunks_a)
     confidence_b = calculate_evidence_confidence(chunks_b)
 
-    # gate BEFORE calling the LLM — don't rely on the model noticing irrelevance
     if confidence_a["level"] in ("low", "none"):
         return {
             "answer": f"Document A does not contain sufficient information on this topic to compare (confidence: {confidence_a['level']}).",

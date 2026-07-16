@@ -14,12 +14,6 @@ RETRY_INSTRUCTION = (
 
 
 def reformulate_query(original_query: str) -> str:
-    """
-    Agentic pre-retrieval step: if initial retrieval evidence is weak, the
-    system rewrites its own query (broadening/rephrasing it) instead of
-    proceeding with weak context — a decision made autonomously based on
-    retrieval quality, before generation ever runs.
-    """
     llm = get_llm()
     system_message = SystemMessage(content=(
         "You rewrite search queries to improve retrieval from a knowledge base. "
@@ -34,20 +28,19 @@ def reformulate_query(original_query: str) -> str:
         rewritten = response.content.strip().strip('"')
         return rewritten if rewritten else original_query
     except Exception:
-        return original_query  
+        return original_query
 
 
-def answer_question(query: str, vector_store: Chroma, k: int = 10, max_retries: int = 1) -> dict:
-    chunks = retrieve(query, vector_store, k=k)
+def answer_question(query: str, vector_store: Chroma, user_id: str, k: int = 10, max_retries: int = 1) -> dict:
+    chunks = retrieve(query, vector_store, user_id, k=k)
     confidence = calculate_evidence_confidence(chunks)
 
-    # --- Agentic pre-generation step: reformulate query if evidence is weak ---
     reformulated = False
     reformulated_query = None
     if confidence["level"] in ("low", "none"):
         reformulated_query = reformulate_query(query)
         if reformulated_query != query:
-            new_chunks = retrieve(reformulated_query, vector_store, k=k)
+            new_chunks = retrieve(reformulated_query, vector_store, user_id, k=k)
             new_confidence = calculate_evidence_confidence(new_chunks)
             if new_confidence["level"] not in ("low", "none") or (
                 new_confidence.get("top_rerank_score", -999) > confidence.get("top_rerank_score", -999)
@@ -64,9 +57,8 @@ def answer_question(query: str, vector_store: Chroma, k: int = 10, max_retries: 
         retries += 1
 
         if confidence["level"] != "high":
-            # evidence itself was weak — pull in more chunks before retrying
             k *= 2
-            chunks = retrieve(query, vector_store, k=k)
+            chunks = retrieve(query, vector_store, user_id, k=k)
             confidence = calculate_evidence_confidence(chunks)
 
         result = generate_answer(query, chunks, extra_instruction=RETRY_INSTRUCTION)

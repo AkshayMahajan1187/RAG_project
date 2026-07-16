@@ -70,8 +70,6 @@ def classify_intent(user_input: str, fallback_topic: str = None) -> RouteDecisio
                 time.sleep(0.5)
                 continue
 
-    # Both attempts failed — fall back safely.
-    # Guess compare vs qa from keywords only because no LLM judgment is available at all.
     safe_topic = fallback_topic or user_input
     likely_compare = any(kw in user_input.lower() for kw in COMPARE_KEYWORDS)
 
@@ -85,6 +83,7 @@ def classify_intent(user_input: str, fallback_topic: str = None) -> RouteDecisio
 def route_and_execute(
     user_input: str,
     vector_store: Chroma,
+    user_id: str,
     file_a: Optional[str] = None,
     file_b: Optional[str] = None,
     memory: Optional[ConversationMemory] = None
@@ -113,10 +112,10 @@ def route_and_execute(
                 "answer": "Comparison requires two documents to be selected first.",
                 "planner_reasoning": decision.reasoning
             }
-        result = compare_documents(decision.topic, file_a, file_b, vector_store)
+        result = compare_documents(decision.topic, file_a, file_b, vector_store, user_id)
         result["intent"] = "compare"
     else:
-        result = answer_question(decision.topic, vector_store)
+        result = answer_question(decision.topic, vector_store, user_id)
         result["intent"] = "qa"
 
     memory.add_turn(

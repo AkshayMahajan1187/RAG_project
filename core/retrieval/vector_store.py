@@ -15,68 +15,55 @@ def get_vector_store() -> Chroma:
     return vector_store
 
 
-def get_existing_hashes(vector_store: Chroma, file_path: str) -> set:
+def get_existing_hashes(vector_store: Chroma, file_path: str, user_id: str) -> set:
     try:
-        results = vector_store.get(where={"source": file_path})
+        results = vector_store.get(where={"$and": [{"source": file_path}, {"user_id": user_id}]})
         if results and results["metadatas"]:
             return {m["file_hash"] for m in results["metadatas"] if m and "file_hash" in m}
     except Exception:
         pass
     return set()
 
-def delete_documents(vector_store: Chroma, file_path: str) -> None:
+def delete_documents(vector_store: Chroma, file_path: str, user_id: str) -> None:
     try:
-        results = vector_store.get(where={"source": file_path})
+        results = vector_store.get(where={"$and": [{"source": file_path}, {"user_id": user_id}]})
         if results and results["ids"]:
             vector_store.delete(ids=results["ids"])
-            print(f"Deleted {len(results['ids'])} old chunks for {file_path}")
     except Exception as e:
         print(f"Failed to delete old chunks: {e}")
 
-def get_chunks_by_hash(vector_store: Chroma, file_hash: str) -> set:
-    """Check if this exact content (by hash) exists anywhere, regardless of filename."""
+def get_chunks_by_hash(vector_store: Chroma, file_hash: str, user_id: str) -> set:
     try:
-        results = vector_store.get(where={"file_hash": file_hash})
+        results = vector_store.get(where={"$and": [{"file_hash": file_hash}, {"user_id": user_id}]})
         if results and results["ids"]:
             return set(results["ids"])
     except Exception:
         pass
     return set()
 
-
 def add_documents(chunks: List[Document]) -> Chroma:
+    # chunks must already carry metadata["user_id"] (set at upload time)
     vector_store = get_vector_store()
-
     if not chunks:
-        print("No chunks to add.")
         return vector_store
-
     files = {}
     for chunk in chunks:
-        source = chunk.metadata["source"]
-        files.setdefault(source, []).append(chunk)
+        files.setdefault(chunk.metadata["source"], []).append(chunk)
 
     new_chunks = []
     for source, file_chunks in files.items():
         file_hash = file_chunks[0].metadata["file_hash"]
+        user_id = file_chunks[0].metadata["user_id"]
         filename = file_chunks[0].metadata["filename"]
 
-        # Case 1: identical content already exists somewhere (same or different filename)
-        if get_chunks_by_hash(vector_store, file_hash):
-            print(f"Skipping {filename} — identical content already ingested")
+        if get_chunks_by_hash(vector_store, file_hash, user_id):
+            print(f"Skipping {filename} — identical content already ingested for this user")
             continue
-
-        # Case 2: this exact file path exists but with OLD/different content — replace it
-        existing_at_path = get_existing_hashes(vector_store, source)
-        if existing_at_path:
-            print(f"{filename} changed — replacing old version")
-            delete_documents(vector_store, source)
+        if get_existing_hashes(vector_store, source, user_id):
+            delete_documents(vector_store, source, user_id)
 
         new_chunks.extend(file_chunks)
 
-    if not new_chunks:
-        return vector_store
-
-    vector_store.add_documents(new_chunks)
-    print(f"Added {len(new_chunks)} new chunks to vector store")
+    if new_chunks:
+        vector_store.add_documents(new_chunks)
     return vector_store

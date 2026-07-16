@@ -8,17 +8,32 @@ from core.agents.planner import route_and_execute
 from core.memory.session_manager import SessionMemoryManager
 from core.ingestion.loader import load_document
 from core.ingestion.chunker import chunk_documents
+import extra_streamlit_components as stx
+
+
+@st.cache_resource
+def get_cookie_manager():
+    return stx.CookieManager()
+
+
+def get_user_id():
+    cookie_manager = get_cookie_manager()
+    user_id = cookie_manager.get("rag_user_id")
+    if not user_id:
+        user_id = str(uuid.uuid4())
+        cookie_manager.set("rag_user_id", user_id, expires_at=None)
+    return user_id
+
 
 st.set_page_config(page_title="AI Knowledge Assistant", page_icon="🧠", layout="wide")
 
 
-# --- One-time setup: load models + build BM25, cached across reruns ---
+# --- One-time setup: just get the vector store handle, cached across reruns.
+# BM25 is NOT built here anymore — it has to be per-user, and there's no user
+# context yet at cache_resource time (this runs once for the whole process).
 @st.cache_resource
 def init_pipeline():
-    vector_store = get_vector_store()
-    all_chunks = get_all_chunks(vector_store)
-    build_bm25_index(all_chunks)
-    return vector_store
+    return get_vector_store()
 
 
 vector_store = init_pipeline()
@@ -28,11 +43,21 @@ UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
 
 
 # --- Session setup ---
+
+if "user_id" not in st.session_state:
+    st.session_state.user_id = get_user_id()
+
 if "session_id" not in st.session_state:
     st.session_state.session_id = str(uuid.uuid4())
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
+
+# Build this user's BM25 index once per browser session (not once per process).
+# Cheap enough to redo per session_state reset; avoids stale/missing index.
+if "bm25_built_for" not in st.session_state or st.session_state.bm25_built_for != st.session_state.user_id:
+    build_bm25_index(get_all_chunks(vector_store, st.session_state.user_id), st.session_state.user_id)
+    st.session_state.bm25_built_for = st.session_state.user_id
 
 
 def new_chat():
@@ -42,7 +67,7 @@ def new_chat():
 
 def get_documents():
     try:
-        results = vector_store.get()
+        results = vector_store.get(where={"user_id": st.session_state.user_id})
         return sorted(set(
             m["filename"] for m in results["metadatas"] if m and "filename" in m
         ))
@@ -76,6 +101,8 @@ with st.sidebar:
     st.markdown("## 🧠 Knowledge Assistant")
     st.caption("Agentic RAG system")
 
+    st.sidebar.write(st.session_state.user_id)
+
     if st.button("➕ New Chat", use_container_width=True):
         new_chat()
         st.rerun()
@@ -101,10 +128,15 @@ with st.sidebar:
 
                     raw_docs = load_document(str(save_path))
                     chunks = chunk_documents(raw_docs)
+
+                    # tag every chunk with whose document this is
+                    for c in chunks:
+                        c.metadata["user_id"] = st.session_state.user_id
+
                     add_documents(chunks)
 
-                    all_chunks = get_all_chunks(vector_store)
-                    build_bm25_index(all_chunks)
+                    all_chunks = get_all_chunks(vector_store, st.session_state.user_id)
+                    build_bm25_index(all_chunks, st.session_state.user_id)
 
                     st.success(f"Added {len(chunks)} chunks from {uploaded_file.name}")
                     st.rerun()
@@ -137,7 +169,7 @@ for msg in st.session_state.messages:
         if msg["role"] == "assistant" and msg.get("intent") != "smalltalk":
             if msg.get("trust"):
                 render_trust_badge(msg["trust"])
-            
+
             if msg.get("query_reformulated"):
                 st.info(f" Query reformulated for better retrieval: *\"{msg.get('reformulated_query')}\"*")
 
@@ -160,6 +192,7 @@ if user_input:
             result = route_and_execute(
                 user_input=user_input,
                 vector_store=vector_store,
+                user_id=st.session_state.user_id,
                 file_a=file_a if compare_mode else None,
                 file_b=file_b if compare_mode else None,
                 memory=memory
