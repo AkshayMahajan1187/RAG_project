@@ -1,0 +1,20 @@
+[
+  {
+    "timestamp": "2026-07-16T23:26:01.332394",
+    "query": "What is code optimization?",
+    "intent": "qa",
+    "answer": "I cannot find this information in the provided documents.",
+    "trust": {
+      "trust": "none",
+      "reason": "No evidence was retrieved to support an answer.",
+      "evidence_level": "none",
+      "grounded": null
+    },
+    "grounded": null,
+    "citations": [],
+    "file_a": null,
+    "file_b": null,
+    "confidence_a": null,
+    "confidence_b": null
+  }
+]

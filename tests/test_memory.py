@@ -18,14 +18,14 @@ print("=== MEMORY TEST ===\n")
 # Turn 1: Ask something
 query1 = "What is register allocation?"
 print(f"Q1: {query1}")
-result1 = route_and_execute(query1, vector_store, memory=memory)
+result1 = route_and_execute(query1, vector_store, user_id="default", memory=memory)
 print(f"A1: {result1['answer'][:150]}...")
 print(f"Trust: {result1.get('trust', {}).get('trust')}\n")
 
 # Turn 2: Follow-up that references the first answer
 query2 = "What problem does it try to solve?"
 print(f"Q2: {query2}")
-result2 = route_and_execute(query2, vector_store, memory=memory)
+result2 = route_and_execute(query2, vector_store, user_id="default", memory=memory)
 print(f"A2: {result2['answer'][:150]}...")
 print(f"Trust: {result2.get('trust', {}).get('trust')}\n")
 

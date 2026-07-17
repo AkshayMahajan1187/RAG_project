@@ -1,0 +1,68 @@
+[
+  {
+    "timestamp": "2026-07-16T23:35:04.485184",
+    "query": "What are the types of code optimization?",
+    "intent": "qa",
+    "answer": "There are two broad categories of code optimization from a software engineering standpoint:\n\n1. Micro-optimizations: small, localized changes such as avoiding redundant function calls inside loops, minimizing object allocation, and choosing efficient data structures for a given access pattern.\n2. Macro-optimizations: architectural-level decisions such as caching, batching expensive operations, and restructuring data flow to reduce I/O or network calls.",
+    "trust": {
+      "trust": "medium",
+      "reason": "The answer is faithful to the retrieved evidence, which was medium confidence.",
+      "evidence_level": "medium",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 3,
+        "filename": "code_optimization_dev_perspective.pdf",
+        "page": 1,
+        "chunk_id": "code_optimization_dev_perspective.pdf_page1_chunk1",
+        "snippet": "1. Micro-optimizations: small, localized changes such as avoiding redundant function calls inside loops,\nminimizing object allocation, and choosing ef..."
+      },
+      {
+        "ref": 3,
+        "filename": "code_optimization_dev_perspective.pdf",
+        "page": 1,
+        "chunk_id": "code_optimization_dev_perspective.pdf_page1_chunk1",
+        "snippet": "1. Micro-optimizations: small, localized changes such as avoiding redundant function calls inside loops,\nminimizing object allocation, and choosing ef..."
+      }
+    ],
+    "file_a": null,
+    "file_b": null,
+    "confidence_a": null,
+    "confidence_b": null
+  },
+  {
+    "timestamp": "2026-07-16T23:42:54.062987",
+    "query": "explain me both the types",
+    "intent": "qa",
+    "answer": "There are two broad categories of code optimization from a software engineering standpoint: \n\n1. Micro-optimizations: small, localized changes such as avoiding redundant function calls inside loops, minimizing object allocation, and choosing efficient data structures for a given access pattern.\n2. Macro-optimizations: architectural-level decisions such as caching, batching expensive operations, and restructuring data flow to reduce I/O or network calls.",
+    "trust": {
+      "trust": "medium",
+      "reason": "The answer is faithful to the retrieved evidence, which was medium confidence.",
+      "evidence_level": "medium",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 3,
+        "filename": "code_optimization_dev_perspective.pdf",
+        "page": 1,
+        "chunk_id": "code_optimization_dev_perspective.pdf_page1_chunk1",
+        "snippet": "1. Micro-optimizations: small, localized changes such as avoiding redundant function calls inside loops,\nminimizing object allocation, and choosing ef..."
+      },
+      {
+        "ref": 4,
+        "filename": "code_optimization_dev_perspective.pdf",
+        "page": 1,
+        "chunk_id": "code_optimization_dev_perspective.pdf_page1_chunk3",
+        "snippet": "wasted effort and increased code complexity. The recommended practice is to first write clear, correct\ncode, then profile to find actual bottlenecks,..."
+      }
+    ],
+    "file_a": null,
+    "file_b": null,
+    "confidence_a": null,
+    "confidence_b": null
+  }
+]

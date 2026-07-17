@@ -21,7 +21,11 @@ EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 
 # === Retrieval ===
 TOP_K_RETRIEVAL = 10
-TOP_K_RERANK = 3
+TOP_K_RERANK = 5
+# Fuse hybrid RRF rank with cross-encoder score (sum should be 1.0).
+# RRF weight prevents the reranker from overriding good hybrid results.
+RERANK_RRF_WEIGHT = 0.45
+RERANK_CE_WEIGHT = 0.55
 
 # === Chunking ===
 CHUNK_SIZE = 512

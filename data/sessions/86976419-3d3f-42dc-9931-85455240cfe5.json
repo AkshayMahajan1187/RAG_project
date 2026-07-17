@@ -1,0 +1,35 @@
+[
+  {
+    "timestamp": "2026-07-16T23:07:38.433565",
+    "query": "What are the types of code optimization?",
+    "intent": "qa",
+    "answer": "The provided context does not explicitly list the types of code optimization. However, it mentions two categories of optimization efforts from a software engineering standpoint:\n\n1. Low-risk micro-optimizations\n2. Higher-risk architectural macro-optimizations",
+    "trust": {
+      "trust": "low",
+      "reason": "The answer includes details not clearly supported by the retrieved evidence, regardless of how strong that evidence was.",
+      "evidence_level": "high",
+      "grounded": false
+    },
+    "grounded": false,
+    "citations": [
+      {
+        "ref": 2,
+        "filename": "code_optimization_dev_perspective.pdf",
+        "page": 1,
+        "chunk_id": "code_optimization_dev_perspective.pdf_page1_chunk0",
+        "snippet": "Code Optimization: A Software Engineering Perspective\nIntroduction\nCode optimization is often taught purely as a compiler topic, but in modern softwar..."
+      },
+      {
+        "ref": 3,
+        "filename": "code_optimization_dev_perspective.pdf",
+        "page": 1,
+        "chunk_id": "code_optimization_dev_perspective.pdf_page1_chunk3",
+        "snippet": "wasted effort and increased code complexity. The recommended practice is to first write clear, correct\ncode, then profile to find actual bottlenecks,..."
+      }
+    ],
+    "file_a": null,
+    "file_b": null,
+    "confidence_a": null,
+    "confidence_b": null
+  }
+]

@@ -17,8 +17,9 @@ app = FastAPI(title="AI Knowledge Assistant API")
 
 # --- Bootstrap on startup: load vector store + BM25 once, not per-request ---
 vector_store = get_vector_store()
-all_chunks = get_all_chunks(vector_store)
-build_bm25_index(all_chunks)
+DEFAULT_USER_ID = "default"
+all_chunks = get_all_chunks(vector_store, DEFAULT_USER_ID)
+build_bm25_index(all_chunks, DEFAULT_USER_ID)
 
 
 # --- Request/response schemas ---
@@ -26,6 +27,7 @@ build_bm25_index(all_chunks)
 class ChatRequest(BaseModel):
     session_id: str
     message: str
+    user_id: str = "default"
     file_a: Optional[str] = None
     file_b: Optional[str] = None
 
@@ -57,6 +59,7 @@ def chat(request: ChatRequest):
         result = route_and_execute(
             user_input=request.message,
             vector_store=vector_store,
+            user_id=request.user_id,
             file_a=request.file_a,
             file_b=request.file_b,
             memory=memory
@@ -82,7 +85,7 @@ UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
 
 
 @app.post("/upload")
-def upload_document(file: UploadFile = File(...)):
+def upload_document(file: UploadFile = File(...), user_id: str = "default"):
     # Step 1: save the uploaded file to disk
     save_path = UPLOAD_DIR / file.filename
     try:
@@ -95,6 +98,8 @@ def upload_document(file: UploadFile = File(...)):
     try:
         raw_docs = load_document(str(save_path))
         chunks = chunk_documents(raw_docs)
+        for c in chunks:
+            c.metadata["user_id"] = user_id
         add_documents(chunks)
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Ingestion failed: {e}")
@@ -102,8 +107,8 @@ def upload_document(file: UploadFile = File(...)):
     # Step 3: rebuild BM25 with the COMPLETE chunk set (old + new)
     global vector_store
     try:
-        all_chunks = get_all_chunks(vector_store)
-        build_bm25_index(all_chunks)
+        all_chunks = get_all_chunks(vector_store, user_id)
+        build_bm25_index(all_chunks, user_id)
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"BM25 rebuild failed: {e}")
 

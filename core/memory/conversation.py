@@ -52,7 +52,7 @@ class ConversationMemory:
             self._save_history()
 
     def get_context(self) -> str:
-        """Format recent conversation history as context string for the planner."""
+        """Format recent conversation history for the planner and query rewriter."""
         if not self.history:
             return ""
 
@@ -60,8 +60,12 @@ class ConversationMemory:
         lines = ["=== Recent Conversation ==="]
         for turn in recent:
             lines.append(f"Q: {turn['query']}")
-            lines.append(f"A: {turn['answer'][:200]}...")  # truncate for brevity
-            trust_val = turn.get('trust') or {}
+            # Keep enough of the answer for follow-up resolution (lists, named concepts).
+            answer = turn["answer"]
+            if len(answer) > 400:
+                answer = answer[:400] + "..."
+            lines.append(f"A: {answer}")
+            trust_val = turn.get("trust") or {}
             lines.append(f"Trust: {trust_val.get('trust', 'unknown')}\n")
         return "\n".join(lines)
 

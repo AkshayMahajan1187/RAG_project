@@ -33,20 +33,23 @@ from eval_metrics import (
 )
 
 
+EVAL_USER_ID = "default"
+
+
 def vector_only_pipeline(vector_store, query):
-    return semantic_search(vector_store, query, k=TOP_K_RETRIEVAL)
+    return semantic_search(vector_store, query, EVAL_USER_ID, k=TOP_K_RETRIEVAL)
 
 
 def bm25_only_pipeline(vector_store, query):
-    return bm25_search(query, k=TOP_K_RETRIEVAL)
+    return bm25_search(query, EVAL_USER_ID, k=TOP_K_RETRIEVAL)
 
 
 def hybrid_pipeline(vector_store, query):
-    return hybrid_search(vector_store, query, k=TOP_K_RETRIEVAL)
+    return hybrid_search(vector_store, query, EVAL_USER_ID, k=TOP_K_RETRIEVAL)
 
 
 def hybrid_rerank_pipeline(vector_store, query):
-    hybrid_results = hybrid_search(vector_store, query, k=TOP_K_RETRIEVAL)
+    hybrid_results = hybrid_search(vector_store, query, EVAL_USER_ID, k=TOP_K_RETRIEVAL)
     return rerank(query, hybrid_results)[:TOP_K_RERANK]
 
 
@@ -179,8 +182,8 @@ def main(limit: int = None, variant: str = None):
 
     print("Loading vector store and building BM25 index...")
     vector_store = get_vector_store()
-    all_chunks = get_all_chunks(vector_store)
-    build_bm25_index(all_chunks)
+    all_chunks = get_all_chunks(vector_store, EVAL_USER_ID)
+    build_bm25_index(all_chunks, EVAL_USER_ID)
 
     pipelines_to_run = PIPELINES
     if variant:

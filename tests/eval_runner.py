@@ -11,8 +11,8 @@ vector_store = get_vector_store()
 
 from core.retrieval.hybrid_search import build_bm25_index, get_all_chunks
 
-all_chunks = get_all_chunks(vector_store)
-build_bm25_index(all_chunks)
+all_chunks = get_all_chunks(vector_store, "default")
+build_bm25_index(all_chunks, "default")
 
 FILE_A = "data/uploaded_docs/test.pdf"    # unit 4 - code optimization & generation
 FILE_B = "data/uploaded_docs/test2.pdf"   # unit 2 - syntax analysis

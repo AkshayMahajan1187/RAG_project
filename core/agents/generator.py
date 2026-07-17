@@ -68,7 +68,12 @@ def build_citations(chunks: List[Document], cited_numbers: List[int]) -> List[di
     return citations
 
 
-def generate_answer(query: str, chunks: List[Document], extra_instruction: str = "") -> dict:
+def generate_answer(
+    query: str,
+    chunks: List[Document],
+    extra_instruction: str = "",
+    is_follow_up: bool = False,
+) -> dict:
     if not chunks:
         return {
             "answer": "I cannot find this information in the provided documents.",
@@ -78,11 +83,24 @@ def generate_answer(query: str, chunks: List[Document], extra_instruction: str =
 
     context = build_context(chunks)
 
+    follow_up_rules = ""
+    if is_follow_up:
+        follow_up_rules = (
+            "\nThis is a follow-up question. Do NOT repeat the previous short answer. "
+            "Provide new detail, explanation, or examples from the context that were "
+            "not already stated. If the user asks to explain items previously listed, "
+            "explain each item individually with supporting detail."
+        )
+
     system_message = SystemMessage(content=(
         "You are a helpful assistant that answers questions using ONLY the provided context. "
-        "If the answer is not in the context, say so clearly. "
+        "If the answer is not in the context, say so clearly.\n\n"
+        "When multiple context chunks are provided, prefer the chunk that explicitly "
+        "defines, lists, or explains the answer over introductory or summary chunks "
+        "that only mention the topic in passing.\n\n"
         "After your answer, on a new line, write 'Sources: ' followed by the bracket "
         "numbers you used, e.g. Sources: [1], [2]"
+        + follow_up_rules
         + (f"\n\n{extra_instruction}" if extra_instruction else "")
     ))
 

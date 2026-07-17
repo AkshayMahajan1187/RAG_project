@@ -1,0 +1,106 @@
+[
+  {
+    "timestamp": "2026-07-16T22:52:14.626326",
+    "query": "What are the types of code optimization?",
+    "intent": "qa",
+    "answer": "According to the context, there are two broad categories of optimization efforts from a software engineering standpoint: \n\n1. wasted effort\n2. increased code complexity\n\nHowever, the context also mentions that these categories are not the types of code optimization, but rather the potential drawbacks of optimization efforts. The recommended practice is to first write clear, correct code, then profile to find actual bottlenecks, and only then optimize the specific hot paths identified by measurement.\n\nThe context does not explicitly mention the types of code optimization, but it does mention that profiling-driven optimization is a type of developer-driven optimization.",
+    "trust": {
+      "trust": "low",
+      "reason": "The answer includes details not clearly supported by the retrieved evidence, regardless of how strong that evidence was.",
+      "evidence_level": "high",
+      "grounded": false
+    },
+    "grounded": false,
+    "citations": [
+      {
+        "ref": 3,
+        "filename": "code_optimization_dev_perspective.pdf",
+        "page": 1,
+        "chunk_id": "code_optimization_dev_perspective.pdf_page1_chunk3",
+        "snippet": "wasted effort and increased code complexity. The recommended practice is to first write clear, correct\ncode, then profile to find actual bottlenecks,..."
+      }
+    ],
+    "file_a": null,
+    "file_b": null,
+    "confidence_a": null,
+    "confidence_b": null
+  },
+  {
+    "timestamp": "2026-07-16T22:52:52.261304",
+    "query": "What are the types of code optimization?",
+    "intent": "qa",
+    "answer": "Code optimization is a discipline practiced by developers directly, independent of what the compiler does automatically.",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 3,
+        "filename": "code_optimization_dev_perspective.pdf",
+        "page": 1,
+        "chunk_id": "code_optimization_dev_perspective.pdf_page1_chunk0",
+        "snippet": "Code Optimization: A Software Engineering Perspective\nIntroduction\nCode optimization is often taught purely as a compiler topic, but in modern softwar..."
+      }
+    ],
+    "file_a": null,
+    "file_b": null,
+    "confidence_a": null,
+    "confidence_b": null
+  },
+  {
+    "timestamp": "2026-07-16T22:53:09.818240",
+    "query": "What are the types of code optimization?",
+    "intent": "qa",
+    "answer": "Code optimization is a discipline practiced by developers directly, independent of what the compiler does automatically.",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 3,
+        "filename": "code_optimization_dev_perspective.pdf",
+        "page": 1,
+        "chunk_id": "code_optimization_dev_perspective.pdf_page1_chunk0",
+        "snippet": "Code Optimization: A Software Engineering Perspective\nIntroduction\nCode optimization is often taught purely as a compiler topic, but in modern softwar..."
+      }
+    ],
+    "file_a": null,
+    "file_b": null,
+    "confidence_a": null,
+    "confidence_b": null
+  },
+  {
+    "timestamp": "2026-07-16T22:53:38.591902",
+    "query": "What are the types of code optimization?",
+    "intent": "qa",
+    "answer": "Code optimization is a discipline practiced by developers directly, independent of what the compiler does automatically.",
+    "trust": {
+      "trust": "high",
+      "reason": "The answer is faithful to the retrieved evidence, which was high confidence.",
+      "evidence_level": "high",
+      "grounded": true
+    },
+    "grounded": true,
+    "citations": [
+      {
+        "ref": 3,
+        "filename": "code_optimization_dev_perspective.pdf",
+        "page": 1,
+        "chunk_id": "code_optimization_dev_perspective.pdf_page1_chunk0",
+        "snippet": "Code Optimization: A Software Engineering Perspective\nIntroduction\nCode optimization is often taught purely as a compiler topic, but in modern softwar..."
+      }
+    ],
+    "file_a": null,
+    "file_b": null,
+    "confidence_a": null,
+    "confidence_b": null
+  }
+]
