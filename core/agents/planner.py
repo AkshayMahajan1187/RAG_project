@@ -111,7 +111,7 @@ def classify_intent(user_input: str, fallback_topic: str = None) -> RouteDecisio
     ]
 
     # Prefer json_schema — avoids the tool-calling 'name' vs 'intent' bug on Groq/Llama.
-    methods = ["json_schema", "function_calling"]
+    methods = ["json_mode", "function_calling"]
     last_error = None
 
     for method in methods:
