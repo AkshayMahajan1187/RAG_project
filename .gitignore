@@ -19,3 +19,6 @@ Thumbs.db
 
 # Chroma DB is per-user now — never commit it, it regenerates fresh per deploy
 data/chroma_db/
+# Runtime data: created by the app, never committed
+data/sessions/
+data/conversation_history.json
