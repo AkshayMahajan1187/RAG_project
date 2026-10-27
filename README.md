@@ -119,8 +119,8 @@ Rather than assuming the architecture choices (hybrid search, reranking) actuall
 The live demo above is the easiest way to try this. If you want to run it yourself or read through the code locally:
 
 ```bash
-git clone <repo-url>
-cd RAG_Project
+git clone https://github.com/AkshayMahajan1187/RAG_project.git
+cd RAG_project
 pip install -r requirements.txt
 ```
 
@@ -143,4 +143,4 @@ streamlit run streamlit_app.py
 
 ## Author
 
-Akshay — B.Tech CSE (Data Science), Vishwakarma Institute of Information Technology, Pune
+Akshay Mahajan — B.Tech CSE (Data Science), Vishwakarma Institute of Information Technology, Pune
